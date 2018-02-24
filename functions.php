@@ -7,6 +7,8 @@
  * @package Clever_Fox_Media
  */
 
+@include 'includes/customizer.php';
+
 if ( ! function_exists( 'cfm_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -156,3 +158,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Remove Admin Bar
+add_filter('show_admin_bar', '__return_false');
+
+// Load custom functions
+@include 'includes/functions.php';
