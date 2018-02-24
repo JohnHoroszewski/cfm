@@ -1,0 +1,42 @@
+.constrain {
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 320px;
+    padding: 0 10px;
+}
+
+.logo-full {
+    display: none;
+}
+
+a.cta-btn,
+.cta-btn {
+    box-shadow: $lshadow;
+    color: $lightest;
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+
+    &.accent-btn {
+        background-color: $accent;
+    }
+
+    &.dark-btn {
+        background-color: $darkest;
+    }
+}
+
+.widget-title {
+    color: $lightest;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.gallery-item {
+
+    figcaption {
+        margin: 0 auto;
+        max-width: 230px;
+    }
+}
