@@ -515,22 +515,27 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: $accent;
+	transition: $mtrans;
 }
 
 a:visited {
-	color: darken( $accent, 30% );
+	color: $accent;
+	transition: $mtrans;
 }
 
 a:hover, a:focus, a:active {
 	color: $darkest;
+	transition: $mtrans;
 }
 
 a:focus {
 	outline: thin dotted;
+	transition: $mtrans;
 }
 
 a:hover, a:active {
 	outline: 0;
+	transition: $mtrans;
 }
 
 /*--------------------------------------------------------------
@@ -544,7 +549,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul {
-	display: none;
+	// display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;

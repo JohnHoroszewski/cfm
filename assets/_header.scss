@@ -1,0 +1,83 @@
+.top-header {
+    background-color: $dkgray;
+    padding: 5px 0;
+    position: relative;
+
+    .constrain {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+}
+
+.header-contact {
+    margin: 0 auto;
+
+    a {
+        padding: 0 5px;
+    }
+}
+
+.header-connect {
+    background-color: lighten( $dkgray, 10% );
+    -webkit-box-shadow: -1px -3px 4px 1px rgba(0,0,0,.25);
+    box-shadow: -1px -3px 4px 1px rgba(0,0,0,.25);
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    -webkit-transition: $strans;
+    -o-transition: $strans;
+    transition: $strans;
+
+    &.opened {
+        -webkit-transition: $strans;
+        -o-transition: $strans;
+        transition: $strans;
+    }
+
+    a {
+        display: inline-block;
+        margin: 0 5px 0 0;
+        width: auto;
+
+        &.social-icon {
+            width: 20px;
+        }
+    }
+}
+
+.fa-phone {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.clogin {
+    border-left: 2px solid $accent;
+    padding: 0 0 0 10px;
+}
+
+.main-header {
+    -webkit-box-shadow: $lshadow;
+            box-shadow: $lshadow;
+    padding: 5px 0;
+    position: fixed;
+}
+
+a.top-logo {
+    background-position: left top;
+    background-repeat: no-repeat;
+    display: block;
+    height: 54px;
+    text-indent: -9999em;
+    width: 55px;
+}

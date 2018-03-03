@@ -64,12 +64,13 @@ function cfm_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'cfm_social' );
 	$wp_customize->add_setting( 'cfm_social_facebook_link', array( 'default' => __( '' ), 'cfm' ) );
 	$wp_customize->add_setting( 'cfm_social_twitter_link', array( 'default' => __( '' ), 'cfm' ) );
-	$wp_customize->add_setting( 'cfm_social_gplus_link', array( 'default' => __( '' ), 'cfm' ) );
+	$wp_customize->add_setting( 'cfm_social_google_link', array( 'default' => __( '' ), 'cfm' ) );
 	$wp_customize->add_setting( 'cfm_social_linkedin_link', array( 'default' => __( '' ), 'cfm' ) );
 	$wp_customize->add_setting( 'cfm_social_youtube_link', array( 'default' => __( '' ), 'cfm' ) );
     $wp_customize->add_setting( 'cfm_social_vimeo_link', array( 'default' => __( '' ), 'cfm' ) );
     $wp_customize->add_setting( 'cfm_social_instagram_link', array( 'default' => __( '' ), 'cfm' ) );
-	$wp_customize->add_setting( 'cfm_social_pinterest_link', array( 'default' => __( '' ), 'cfm' ) );
+    $wp_customize->add_setting( 'cfm_social_pinterest_link', array( 'default' => __( '' ), 'cfm' ) );
+    $wp_customize->add_setting( 'cfm_social_behance_link', array( 'default' => __( '' ), 'cfm' ) );
 	// Assorted Site Links
 	$wp_customize->add_setting( 'cfm_assorted_links' );
 	$wp_customize->add_setting( 'cfm_site_map', array( 'default' => __( '' ), 'cfm' ) );
@@ -214,10 +215,10 @@ function cfm_customizer( $wp_customize ) {
 	    'section'  => 'cfm_social_section',
 	    'settings' => 'cfm_social_twitter_link',
 	) ) );
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cfm_social_gplus_link', array(
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cfm_social_google_link', array(
 	    'label'    => __( 'Google Plus Link', 'cfm' ),
 	    'section'  => 'cfm_social_section',
-	    'settings' => 'cfm_social_gplus_link',
+	    'settings' => 'cfm_social_google_link',
 	) ) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cfm_social_linkedin_link', array(
 	    'label'    => __( 'LinkedIn Link', 'cfm' ),
@@ -243,6 +244,11 @@ function cfm_customizer( $wp_customize ) {
 	    'label'    => __( 'Pinterest Link', 'cfm' ),
 	    'section'  => 'cfm_social_section',
 	    'settings' => 'cfm_social_pinterest_link',
+    ) ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cfm_social_behance_link', array(
+	    'label'    => __( 'Behance Link', 'cfm' ),
+	    'section'  => 'cfm_social_section',
+	    'settings' => 'cfm_social_behance_link',
 	) ) );
 	// Page Banners
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cfm_page_general', array(

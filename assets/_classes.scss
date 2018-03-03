@@ -5,3 +5,23 @@
     min-width: 320px;
     padding: 0 10px;
 }
+
+.orange-text,
+a.orange-text {
+    color: $accent;
+}
+
+.ltgray-text,
+a.ltgray-text {
+    color: $ltgray;
+}
+
+.dkgray-text,
+a.dkgray-text {
+    color: $dkgray;
+}
+
+.darkest-text,
+a.darkest-text {
+    color: $darkest;
+}
