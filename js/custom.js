@@ -4,9 +4,10 @@ jQuery( document ).ready( function( $ ){
     $connect = $( '.header-connect' ),
     $connectA = $( '#connect-open' );
 
-    console.log( $connect.outerWidth() );
+    // console.log( $connect.outerWidth() );
 
-    if ( $winW < 768 ) {
+    // Initialize if window under 568px
+    if ( $winW < 568 ) {
 
         // Open social connect slidout on mobile
         $connect.css( 'right', -$connect.outerWidth() + 30 );

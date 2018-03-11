@@ -1,7 +1,13 @@
+.site-header {
+    position: fixed;
+    width: 100%;
+}
+
 .top-header {
     background-color: $dkgray;
     padding: 5px 0;
     position: relative;
+    width: 100%;
 
     .constrain {
         display: -webkit-box;
@@ -14,6 +20,14 @@
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
+    }
+
+    a:hover {
+        color: $lightest;
+
+        &> svg {
+            color: $lightest;
+        }
     }
 }
 
@@ -70,7 +84,7 @@
     -webkit-box-shadow: $lshadow;
             box-shadow: $lshadow;
     padding: 5px 0;
-    position: fixed;
+    width: 100%;
 }
 
 a.top-logo {

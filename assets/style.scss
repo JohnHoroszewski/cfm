@@ -515,26 +515,48 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: $accent;
+	-webkit-transition: $mtrans;
+	-o-transition: $mtrans;
+	transition: $mtrans;
+}
+
+a > svg {
+	-webkit-transition: $mtrans;
+	-o-transition: $mtrans;
 	transition: $mtrans;
 }
 
 a:visited {
 	color: $accent;
+	-webkit-transition: $mtrans;
+	-o-transition: $mtrans;
 	transition: $mtrans;
 }
 
 a:hover, a:focus, a:active {
 	color: $darkest;
+	-webkit-transition: $mtrans;
+	-o-transition: $mtrans;
 	transition: $mtrans;
+
+	& > svg {
+		-webkit-transition: $mtrans;
+		-o-transition: $mtrans;
+		transition: $mtrans;
+	}
 }
 
 a:focus {
 	outline: thin dotted;
+	-webkit-transition: $mtrans;
+	-o-transition: $mtrans;
 	transition: $mtrans;
 }
 
 a:hover, a:active {
 	outline: 0;
+	-webkit-transition: $mtrans;
+	-o-transition: $mtrans;
 	transition: $mtrans;
 }
 
