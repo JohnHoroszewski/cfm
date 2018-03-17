@@ -1,0 +1,19 @@
+.top-footer {
+    background-color: $dkgray;
+    color: $lightest;
+    padding: 20px 0;
+
+    a {
+        color: $ltgray;
+    }
+}
+
+.bottom-footer {
+    background-color: $accent;
+    color: $lightest;
+    padding: 10px 0;
+
+    a {
+        color: $lightest;
+    }
+}

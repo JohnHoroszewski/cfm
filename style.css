@@ -374,6 +374,15 @@ table {
   width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.075rem;
+}
+
+h3 {
+  font-weight: 500;
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -789,6 +798,24 @@ a.top-logo {
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
+.top-footer {
+  background-color: #464646;
+  color: white;
+  padding: 20px 0;
+}
+.top-footer a {
+  color: #b2b2b2;
+}
+
+.bottom-footer {
+  background-color: #fa8d00;
+  color: white;
+  padding: 10px 0;
+}
+.bottom-footer a {
+  color: white;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -890,8 +917,8 @@ object {
   padding: 0 10px;
 }
 
-.orange-text,
-a.orange-text {
+.accent-text,
+a.accent-text {
   color: #fa8d00;
 }
 
@@ -908,6 +935,30 @@ a.dkgray-text {
 .darkest-text,
 a.darkest-text {
   color: #454545;
+}
+
+.accent-bg {
+  background-color: #fa8d00;
+}
+
+.ltgray-bg {
+  background-color: #b2b2b2;
+}
+
+.dkgray-bg {
+  background-color: #464646;
+}
+
+.darkest-bg {
+  background-color: #454545;
+}
+
+.widget:last-of-type {
+  margin: 0;
+}
+
+.widget-title {
+  text-transform: uppercase;
 }
 
 /*--------------------------------------------------------------

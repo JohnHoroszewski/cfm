@@ -6,8 +6,8 @@
     padding: 0 10px;
 }
 
-.orange-text,
-a.orange-text {
+.accent-text,
+a.accent-text {
     color: $accent;
 }
 
@@ -24,4 +24,31 @@ a.dkgray-text {
 .darkest-text,
 a.darkest-text {
     color: $darkest;
+}
+
+.accent-bg {
+    background-color: $accent;
+}
+
+.ltgray-bg {
+    background-color: $ltgray;
+}
+
+.dkgray-bg {
+    background-color: $dkgray;
+}
+
+.darkest-bg {
+    background-color: $darkest;
+}
+
+.widget {
+
+    &:last-of-type {
+        margin: 0;
+    }
+}
+
+.widget-title {
+    text-transform: uppercase;
 }

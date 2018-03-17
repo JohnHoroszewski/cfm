@@ -14,17 +14,53 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cfm' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'cfm' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'cfm' ), 'cfm', '<a href="http://johnswork.com">John Horoszewski</a>' );
-			?>
-		</div><!-- .site-info -->
+		<div class="top-footer">
+			<div class="constrain">
+			
+			<?php if ( is_active_sidebar( 'footer_column_1' ) ) : ?>
+				<div class="footer-col">
+					<?php dynamic_sidebar( 'footer_column_1' ); ?>
+				</div>
+			<?php endif; ?>
+
+			<?php if ( is_active_sidebar( 'footer_column_2' ) ) : ?>
+				<div class="footer-col">
+					<?php dynamic_sidebar( 'footer_column_2' ); ?>
+				</div>
+			<?php endif; ?>
+	
+			<?php if ( is_active_sidebar( 'footer_column_3' ) ) : ?>
+				<div class="footer-col">
+					<?php dynamic_sidebar( 'footer_column_3' ); ?>
+				</div>
+			<?php endif; ?>
+
+			<?php if ( is_active_sidebar( 'footer_column_4' ) ) : ?>
+				<div class="footer-col">
+					<?php dynamic_sidebar( 'footer_column_4' ); ?>
+				</div>
+			<?php endif; ?>
+
+			</div><!-- .constrain -->
+		</div><!-- .top-footer -->
+
+		<div class="bottom-footer">
+			<div class="constrain">
+				<div class="copyright footer-info">
+					&reg;<?php the_date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>.
+				</div>
+				<?php if ( get_theme_mod( 'cfm_site_map' ) ) : ?>
+					<div class="sitemap footer-info">
+						<a href="<?php echo get_theme_mod( 'cfm_site_map' ); ?>">Site Map</a>
+					</div>
+				<?php endif; ?>
+				<?php if ( get_theme_mod( 'cfm_privacy_policy' ) ) : ?>
+					<div class="privacypolicy footer-info">
+						<a href="<?php echo get_theme_mod( 'cfm_privacy_policy' ); ?>">Privacy Policy</a>
+					</div>
+				<?php endif; ?>
+			</div><!-- .constrain -->
+		</div><!-- .bottom-footer -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

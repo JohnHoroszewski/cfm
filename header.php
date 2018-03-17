@@ -30,8 +30,8 @@
 			<div class="constrain">
 			
 				<div class="header-contact">
-					<a class="ltgray-text" href="tel:7322660812"><i class="orange-text fas fa-phone"></i> Call Us</a>
-					<a class="ltgray-text" href="mailto:contact@cleverfoxmedia.net"><i class="orange-text fas fa-envelope"></i> Email Us</a>
+					<a class="ltgray-text" href="tel:7322660812"><i class="accent-text fas fa-phone"></i> Call Us</a>
+					<a class="ltgray-text" href="mailto:contact@cleverfoxmedia.net"><i class="accent-text fas fa-envelope"></i> Email Us</a>
 				</div>
 
 				<div id="header-connect" class="header-connect">
