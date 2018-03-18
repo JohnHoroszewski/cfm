@@ -3,9 +3,7 @@ jQuery( document ).ready( function( $ ){
     $winW = $( window ).width(),
     $connect = $( '.header-connect' ),
     $connectA = $( '#connect-open' );
-
-    // console.log( $connect.outerWidth() );
-
+    
     // Initialize if window under 568px
     if ( $winW < 568 ) {
 
@@ -22,7 +20,6 @@ jQuery( document ).ready( function( $ ){
             }
 
         });
-
     }
 
 });

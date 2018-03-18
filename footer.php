@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="top-footer">
-			<div class="constrain">
+			<div class="constrain flexxed">
 			
 			<?php if ( is_active_sidebar( 'footer_column_1' ) ) : ?>
 				<div class="footer-col">
@@ -49,16 +49,18 @@
 				<div class="copyright footer-info">
 					&reg;<?php the_date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>.
 				</div>
-				<?php if ( get_theme_mod( 'cfm_site_map' ) ) : ?>
-					<div class="sitemap footer-info">
-						<a href="<?php echo get_theme_mod( 'cfm_site_map' ); ?>">Site Map</a>
-					</div>
-				<?php endif; ?>
-				<?php if ( get_theme_mod( 'cfm_privacy_policy' ) ) : ?>
-					<div class="privacypolicy footer-info">
-						<a href="<?php echo get_theme_mod( 'cfm_privacy_policy' ); ?>">Privacy Policy</a>
-					</div>
-				<?php endif; ?>
+				<div class="bf-links footer-info">
+					<?php if ( get_theme_mod( 'cfm_site_map' ) ) : ?>
+						<div class="sitemap">
+							<a href="<?php echo get_theme_mod( 'cfm_site_map' ); ?>">Site Map</a>
+						</div>
+					<?php endif; ?>
+					<?php if ( get_theme_mod( 'cfm_privacy_policy' ) ) : ?>
+						<div class="privacypolicy">
+							<a href="<?php echo get_theme_mod( 'cfm_privacy_policy' ); ?>">Privacy Policy</a>
+						</div>
+					<?php endif; ?>
+				</div>
 			</div><!-- .constrain -->
 		</div><!-- .bottom-footer -->
 	</footer><!-- #colophon -->

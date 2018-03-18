@@ -11,9 +11,48 @@
 .bottom-footer {
     background-color: $accent;
     color: $lightest;
+    overflow: hidden;
     padding: 10px 0;
+    text-align: center;
 
     a {
         color: $lightest;
+    }
+
+    .bf-links {
+        
+        div {
+            display: inline-block;
+
+            &:after {
+                color: $dkgray;
+                content: '|';
+                margin: 0 5px 0 0;
+                padding: 0 0 0 5px;
+            }
+
+            &:last-of-type:after {
+                content: '';
+                display: none;
+            }
+        }
+    }
+}
+
+.subscribe {
+    position: relative;
+
+    button[type=submit] {
+        background-color: $accent;
+        color: $lightest;
+        height: 40px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+
+        .fa-check {
+            font-size: 20px;
+        }
     }
 }

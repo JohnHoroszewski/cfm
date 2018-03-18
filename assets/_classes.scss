@@ -6,6 +6,16 @@
     padding: 0 10px;
 }
 
+.flexxed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
 .accent-text,
 a.accent-text {
     color: $accent;
@@ -42,13 +52,32 @@ a.darkest-text {
     background-color: $darkest;
 }
 
+[class^=btn] {
+    text-transform: uppercase;
+
+    &.accent-bg {
+        color: $lightest;
+    }
+}
+
+.btn-sm {
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.widget {
+    margin: 0 0 1rem 0;
+}
+
 .widget {
 
-    &:last-of-type {
-        margin: 0;
+    .social-icon {
+        font-size: 24px;
+        margin: 0 10px 0 0;
     }
 }
 
 .widget-title {
+    margin: 0 0 .75rem 0;
     text-transform: uppercase;
 }
