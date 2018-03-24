@@ -377,9 +377,14 @@ table {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.075rem;
+  text-transform: uppercase;
 }
 
 h3 {
+  font-weight: 600;
+}
+
+h4 {
   font-weight: 500;
 }
 
@@ -482,7 +487,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-  color: #454545;
+  color: #464646;
   -webkit-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
@@ -706,6 +711,7 @@ a:hover, a:active {
 .site-header {
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
 .top-header {
@@ -780,8 +786,8 @@ a:hover, a:active {
 
 .main-header {
   background-color: white;
-  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
   padding: 5px 0;
   width: 100%;
 }
@@ -800,6 +806,22 @@ a.top-logo {
 --------------------------------------------------------------*/
 .site-content {
   margin: 100px 0 0 0;
+}
+
+.cta-module {
+  background-attachment: fixed;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+.cta-module a {
+  color: white;
+}
+
+.cta-btn-block {
+  background-color: #464646;
 }
 
 /*--------------------------------------------------------------
@@ -965,6 +987,14 @@ object {
   flex-direction: column;
 }
 
+.p35 {
+  padding: 20px 0;
+}
+
+.p50 {
+  padding: 25px 0;
+}
+
 .accent-text,
 a.accent-text {
   color: #fa8d00;
@@ -982,7 +1012,7 @@ a.dkgray-text {
 
 .darkest-text,
 a.darkest-text {
-  color: #454545;
+  color: #464646;
 }
 
 .accent-bg {
@@ -998,7 +1028,11 @@ a.darkest-text {
 }
 
 .darkest-bg {
-  background-color: #454545;
+  background-color: #464646;
+}
+
+.white-bg {
+  background-color: white;
 }
 
 [class^=btn] {
@@ -1008,9 +1042,31 @@ a.darkest-text {
   color: white;
 }
 
-.btn-sm {
+.btn-sm, .btn-md, .btn-lg, .btn-xl {
   display: inline-block;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn-sm {
+  min-width: 115px;
   padding: 5px 10px;
+}
+
+.btn-md {
+  min-width: 150px;
+  padding: 10px 20px;
+}
+
+.btn-lg {
+  min-width: 200px;
+  padding: 15px 30px;
+}
+
+.btn-xl {
+  min-width: 250px;
+  padding: 20px 45px;
 }
 
 .widget {

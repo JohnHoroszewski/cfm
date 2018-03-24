@@ -7,8 +7,8 @@ function cfm_sidebars() {
 		'class'         => 'footer-column',
 		'name'          => __( 'Footer Column #1', 'text_domain' ),
 		'description'   => __( 'Footer Area Column #1', 'text_domain' ),
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 		'before_widget' => '<div class="widget">',
 		'after_widget'  => '</div>',
 	);
@@ -19,8 +19,8 @@ function cfm_sidebars() {
 		'class'         => 'footer-column',
 		'name'          => __( 'Footer Column #2', 'text_domain' ),
 		'description'   => __( 'Footer Area Column #2', 'text_domain' ),
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 		'before_widget' => '<div class="widget">',
 		'after_widget'  => '</div>',
 	);
@@ -31,8 +31,8 @@ function cfm_sidebars() {
 		'class'         => 'footer-column',
 		'name'          => __( 'Footer Column #3', 'text_domain' ),
 		'description'   => __( 'Footer Area Column #3', 'text_domain' ),
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 		'before_widget' => '<div class="widget">',
 		'after_widget'  => '</div>',
 	);
@@ -43,8 +43,8 @@ function cfm_sidebars() {
 		'class'         => 'footer-column',
 		'name'          => __( 'Footer Column #4', 'text_domain' ),
 		'description'   => __( 'Footer Area Column #4', 'text_domain' ),
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 		'before_widget' => '<div class="widget">',
 		'after_widget'  => '</div>',
 	);

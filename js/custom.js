@@ -22,4 +22,14 @@ jQuery( document ).ready( function( $ ){
         });
     }
 
+    $( window ).scroll( function(){
+
+		var $parallax = $( '.parallax' ),
+			wScroll = $( this ).scrollTop();
+
+		$parallax.css({
+			'background-position-y' : -wScroll /8,
+		});
+	});
+
 });

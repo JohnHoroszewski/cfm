@@ -36,11 +36,32 @@ get_header(); ?>
                     <?php endwhile; ?>
                 <?php endif; ?>
 
-            </section>
+            </section><!-- .slider -->
+
+            <section class="cta-module parallax" style="background-image:url( '<?php echo get_theme_mod( 'cfm_cta_background_image' ); ?>' );">
+                <div class="constrain flexxed">
+
+                    <div class="cta-content p50">
+                        <h3><?php echo get_theme_mod( 'cfm_cta_heading' ); ?></h3>
+                        <div class="text-block">
+                            <?php echo get_theme_mod( 'cfm_cta_text' ); ?>
+                        </div>
+                    </div>
+
+                    <div class="cta-btn-block p50">
+                        <div class="cta-snippet">
+                            <?php echo get_theme_mod( 'cfm_cta_button_snippet' ); ?>
+                        </div>
+                        <a class="<?php echo get_theme_mod( 'cfm_cta_button_color' ); ?> btn-md" href="<?php echo get_theme_mod( 'cfm_cta_button_url' ); ?>">
+                            <?php echo get_theme_mod( 'cfm_cta_button_text' ); ?>
+                        </a>
+                    </div>
+
+                </div><!-- .constrain -->
+            </section><!-- .cta-module -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

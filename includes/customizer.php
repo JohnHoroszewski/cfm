@@ -25,6 +25,12 @@ function cfm_customizer( $wp_customize ) {
 	    'priority'    => 30,
 	    'description' => 'Here you can set default page banners for the different page template types. For best results, make sure image is at least 1920x1000px',
 	) );
+	// Call To Action Module
+	$wp_customize->add_section( 'cfm_cta_section' , array(
+		'title'       => __( 'Call to Action Module', 'cfm' ),
+		'priority'    => 10,
+		'description' => 'Page section that can/will appear on multiple pages',
+	) );
 	// Assorted Site Links
 	$wp_customize->add_section( 'cfm_assorted_links_section' , array(
 	    'title'       => __( 'Assorted Site Links', 'cfm' ),
@@ -70,7 +76,16 @@ function cfm_customizer( $wp_customize ) {
     $wp_customize->add_setting( 'cfm_social_vimeo_link', array( 'default' => __( '' ), 'cfm' ) );
     $wp_customize->add_setting( 'cfm_social_instagram_link', array( 'default' => __( '' ), 'cfm' ) );
     $wp_customize->add_setting( 'cfm_social_pinterest_link', array( 'default' => __( '' ), 'cfm' ) );
-    $wp_customize->add_setting( 'cfm_social_behance_link', array( 'default' => __( '' ), 'cfm' ) );
+	$wp_customize->add_setting( 'cfm_social_behance_link', array( 'default' => __( '' ), 'cfm' ) );
+	// Call to Action Module
+	$wp_customize->add_setting( 'cfm_cta_section' );
+	$wp_customize->add_setting( 'cfm_cta_heading', array( 'default' => __( '' ), 'cfm' ) );
+	$wp_customize->add_setting( 'cfm_cta_text', array( 'default' => __( '' ), 'cfm' ) );
+	$wp_customize->add_setting( 'cfm_cta_button_snippet', array( 'default' => __( '' ), 'cfm' ) );
+	$wp_customize->add_setting( 'cfm_cta_button_text', array( 'default' => __( '' ), 'cfm' ) );
+	$wp_customize->add_setting( 'cfm_cta_button_url', array( 'default' => __( '' ), 'cfm' ) );
+	$wp_customize->add_setting( 'cfm_cta_button_color', array( 'default' => __( '' ), 'cfm' ) );
+	$wp_customize->add_setting( 'cfm_cta_background_image', array( 'default' => __( '' ), 'cfm' ) );
 	// Assorted Site Links
 	$wp_customize->add_setting( 'cfm_assorted_links' );
 	$wp_customize->add_setting( 'cfm_site_map', array( 'default' => __( '' ), 'cfm' ) );
@@ -280,6 +295,54 @@ function cfm_customizer( $wp_customize ) {
 	    'label'    => __( 'Single Post Page', 'cfm' ),
 	    'section'  => 'cfm_page_banner_section',
 	    'settings' => 'cfm_post_single',
+	) ) );
+	// Call to Action Module
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cfm_cta_heading', array(
+	    'label'    => __( 'Heading Text', 'cfm' ),
+	    'section'  => 'cfm_cta_section',
+	    'settings' => 'cfm_cta_heading',
+	) ) );
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cfm_cta_text', array(
+	    'label'    => __( 'Text', 'cfm' ),
+	    'section'  => 'cfm_cta_section',
+		'settings' => 'cfm_cta_text',
+		'type'	   => 'textarea'
+	) ) );
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cfm_cta_button_snippet', array(
+		'description' => __( 'Text that will appear above the Call to Action button' ),
+	    'label'    => __( 'Focus Snippet', 'cfm' ),
+	    'section'  => 'cfm_cta_section',
+		'settings' => 'cfm_cta_button_snippet',
+		'type'	   => 'textarea'
+	) ) );
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cfm_cta_button_text', array(
+	    'label'    => __( 'Button Text', 'cfm' ),
+	    'section'  => 'cfm_cta_section',
+		'settings' => 'cfm_cta_button_text'
+	) ) );
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cfm_cta_button_url', array(
+	    'label'    => __( 'Button URL', 'cfm' ),
+	    'section'  => 'cfm_cta_section',
+		'settings' => 'cfm_cta_button_url'
+	) ) );
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cfm_cta_button_color', array(
+	    'label'    => __( 'Button Color', 'cfm' ),
+	    'section'  => 'cfm_cta_section',
+		'settings' => 'cfm_cta_button_color',
+		'type'	   => 'radio',
+		'choices'  => array(
+			'accent-bg'  => 'Accent Color',
+			'ltgray-bg'	 => 'Light Gray',
+			'dkgray-bg'  => 'Dark Gray',
+			'darkest-bg' => 'Darkest',
+			'white-bg'	 => 'White'
+		)
+	) ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cfm_cta_background_image', array(
+		'description' => __( 'Upload background image for CTA Module | 1400x345' ),
+		'label'    => __( 'Background Image', 'cfm' ),
+		'section'  => 'cfm_cta_section',
+		'settings' => 'cfm_cta_background_image',
 	) ) );
 	// Assorted Site Links
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cfm_site_map', array(

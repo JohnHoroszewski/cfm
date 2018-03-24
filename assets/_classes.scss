@@ -16,6 +16,14 @@
             flex-direction: column;
 }
 
+.p35 {
+    padding: 20px 0;
+}
+
+.p50 {
+    padding: 25px 0;
+}
+
 .accent-text,
 a.accent-text {
     color: $accent;
@@ -33,7 +41,7 @@ a.dkgray-text {
 
 .darkest-text,
 a.darkest-text {
-    color: $darkest;
+    color: $dkgray;
 }
 
 .accent-bg {
@@ -49,7 +57,11 @@ a.darkest-text {
 }
 
 .darkest-bg {
-    background-color: $darkest;
+    background-color: $dkgray;
+}
+
+.white-bg {
+    background-color: $lightest;
 }
 
 [class^=btn] {
@@ -60,9 +72,31 @@ a.darkest-text {
     }
 }
 
-.btn-sm {
+.btn-sm, .btn-md, .btn-lg, .btn-xl {
     display: inline-block;
+    box-shadow: $lshadow;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.btn-sm {
+    min-width: 115px;
     padding: 5px 10px;
+}
+
+.btn-md {
+    min-width: 150px;
+    padding: 10px 20px;
+}
+
+.btn-lg {
+    min-width: 200px;
+    padding: 15px 30px;
+}
+
+.btn-xl {
+    min-width: 250px;
+    padding: 20px 45px;
 }
 
 .widget {
