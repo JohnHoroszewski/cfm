@@ -48,7 +48,7 @@ get_header(); ?>
                         </div>
                     </div>
 
-                    <div class="cta-btn-block p50">
+                    <div class="cta-btn-block">
                         <div class="cta-snippet">
                             <?php echo get_theme_mod( 'cfm_cta_button_snippet' ); ?>
                         </div>

@@ -68,8 +68,54 @@
     }
 }
 
+@media only screen and ( min-width: 640px ) {
+
+    // CTA-MODULE
+    .cta-module {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    .cta-content,
+    .cta-btn-block {
+        width: 47%;
+    }
+
+    .cta-btn-block {
+        margin: 0;
+    }
+}
+
 @media only screen and ( min-width: 768px ) {
 
+    // CTA-MODULE
+    .cta-content {
+        width: 63%;
+
+        h3 {
+            font-size: 30px;
+        }
+
+        .text-block {
+            font-size: 19px;
+        }
+    }
+
+    .cta-btn-block {
+       width: 33%;
+    }
+    
+    // FOOTER
     .top-footer {
         padding: 30px 0 20px 0;
     }
@@ -100,18 +146,83 @@
         }
     }
 
+    // CTA-MODULE
+    .cta-content {
+        width: 70%;
+
+        h3 {
+            font-size: 34px;
+        }
+    }
+
+    .cta-btn-block {
+       width: 27%;
+    }
+
     // FOOTER
     .footer-col {
         width: 23%;
     }
 }
 
+@media only screen and ( min-width: 1024px ) {
+
+    // CTA-MODULE
+    .cta-content {
+
+        h3 {
+            font-size: 36px;
+        }
+    }
+
+    .cta-snippet {
+        font-size: 18px;
+    }
+}
+
 @media only screen and ( min-width: 1100px ) {
 
+    // HEADER
     .main-navigation {
 
         li a {
             padding: 0 15px;
         }
+    }
+
+    // CTA-MODULE
+    .cta-content {
+
+        h3 {
+            font-size: 40px;
+        }
+
+        .text-block {
+            font-size: 21px;
+        }
+    }
+}
+
+@media only screen and ( min-width: 1200px ) {
+
+    // CTA-MODULE
+    .cta-content {
+        width: 66%;
+
+        h3 {
+            font-size: 41px;
+        }
+
+        .text-block {
+            font-size: 22px;
+        }
+    }
+
+    .cta-btn-block {
+        width: 33%;
+    }
+
+    .cta-snippet {
+        font-size: 22px;
     }
 }

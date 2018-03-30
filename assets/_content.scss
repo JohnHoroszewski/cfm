@@ -8,6 +8,7 @@
     background-position: center 0;
 	background-repeat: no-repeat;
     background-size: cover;
+    font-weight: 100;
     color: $lightest;
     text-align: center;
 
@@ -18,4 +19,10 @@
 
 .cta-btn-block {
     background-color: $dkgray;
+    margin: 0 0 10px 0;
+    padding: 25px;
+}
+
+.cta-snippet {
+    margin: 0 0 20px 0;
 }
