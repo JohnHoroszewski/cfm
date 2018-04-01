@@ -7,7 +7,7 @@
  * @package Clever_Fox_Media
  */
 
-@include 'includes/customizer.php';
+// @include 'includes/customizer.php';
 
 if ( ! function_exists( 'cfm_setup' ) ) :
 	/**
@@ -153,4 +153,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 add_filter('show_admin_bar', '__return_false');
 
 // Load custom functions
-@include 'includes/functions.php';
+// @include 'includes/functions.php';

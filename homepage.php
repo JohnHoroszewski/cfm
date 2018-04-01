@@ -48,11 +48,11 @@ get_header(); ?>
                         </div>
                     </div>
 
-                    <div class="cta-btn-block">
+                    <div class="cta-btn-block dkgray-bg">
                         <div class="cta-snippet">
                             <?php echo get_theme_mod( 'cfm_cta_button_snippet' ); ?>
                         </div>
-                        <a class="<?php echo get_theme_mod( 'cfm_cta_button_color' ); ?> btn-md" href="<?php echo get_theme_mod( 'cfm_cta_button_url' ); ?>">
+                        <a class="accent-bg btn-md" href="<?php echo get_theme_mod( 'cfm_cta_button_url' ); ?>">
                             <?php echo get_theme_mod( 'cfm_cta_button_text' ); ?>
                         </a>
                     </div>

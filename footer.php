@@ -47,7 +47,7 @@
 		<div class="bottom-footer">
 			<div class="constrain">
 				<div class="copyright footer-info">
-					&reg;<?php the_date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>.
+					&reg;<?php the_date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>
 				</div>
 				<div class="bf-links footer-info">
 					<?php if ( get_theme_mod( 'cfm_site_map' ) ) : ?>

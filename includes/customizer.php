@@ -84,7 +84,7 @@ function cfm_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'cfm_cta_button_snippet', array( 'default' => __( '' ), 'cfm' ) );
 	$wp_customize->add_setting( 'cfm_cta_button_text', array( 'default' => __( '' ), 'cfm' ) );
 	$wp_customize->add_setting( 'cfm_cta_button_url', array( 'default' => __( '' ), 'cfm' ) );
-	$wp_customize->add_setting( 'cfm_cta_button_color', array( 'default' => __( '' ), 'cfm' ) );
+	// $wp_customize->add_setting( 'cfm_cta_button_color', array( 'default' => __( '' ), 'cfm' ) );
 	$wp_customize->add_setting( 'cfm_cta_background_image', array( 'default' => __( '' ), 'cfm' ) );
 	// Assorted Site Links
 	$wp_customize->add_setting( 'cfm_assorted_links' );
@@ -325,19 +325,19 @@ function cfm_customizer( $wp_customize ) {
 	    'section'  => 'cfm_cta_section',
 		'settings' => 'cfm_cta_button_url'
 	) ) );
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cfm_cta_button_color', array(
-	    'label'    => __( 'Button Color', 'cfm' ),
-	    'section'  => 'cfm_cta_section',
-		'settings' => 'cfm_cta_button_color',
-		'type'	   => 'radio',
-		'choices'  => array(
-			'accent-bg'  => 'Accent Color',
-			'ltgray-bg'	 => 'Light Gray',
-			'dkgray-bg'  => 'Dark Gray',
-			'darkest-bg' => 'Darkest',
-			'white-bg'	 => 'White'
-		)
-	) ) );
+	// $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cfm_cta_button_color', array(
+	//     'label'    => __( 'Button Color', 'cfm' ),
+	//     'section'  => 'cfm_cta_section',
+	// 	'settings' => 'cfm_cta_button_color',
+	// 	'type'	   => 'radio',
+	// 	'choices'  => array(
+	// 		'accent-bg'  => 'Accent Color',
+	// 		'ltgray-bg'	 => 'Light Gray',
+	// 		'dkgray-bg'  => 'Dark Gray',
+	// 		'darkest-bg' => 'Darkest',
+	// 		'white-bg'	 => 'White'
+	// 	)
+	// ) ) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cfm_cta_background_image', array(
 		'description' => __( 'Upload background image for CTA Module | 1400x345' ),
 		'label'    => __( 'Background Image', 'cfm' ),
