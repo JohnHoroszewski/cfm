@@ -3,7 +3,9 @@ jQuery( document ).ready( function( $ ){
     $winW = $( window ).width(),
     $connect = $( '.header-connect' ),
     $connectA = $( '#connect-open' );
-    
+  
+    $( '.home-slider' ).slick();
+
     // Initialize if window under 568px
     if ( $winW < 568 ) {
 

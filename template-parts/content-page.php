@@ -50,3 +50,13 @@
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
+<section class="portfolio-cta-module p50 <?php the_field( 'portfolio_cta_module_background_color' ); ?>">
+	<div class="constrain flexxed">
+		<div class="cta-text">
+			<h3><?php echo get_theme_mod( 'theme_portfolio_cta_text' ); ?></h3>
+		</div>
+		<a class="<?php the_field( 'portfolio_cta_module_button_color' ); ?> btn-lg" href="<?php echo get_theme_mod( 'theme_cta_button_url' ); ?>">
+			<?php echo get_theme_mod( 'theme_portfolio_cta_button_text' ); ?>
+		</a>
+	</div><!-- .constrain -->
+</section><!-- .portfolio-cta-module -->

@@ -48,6 +48,10 @@ a.darkest-text {
     background-color: $accent;
 }
 
+.white-bg {
+    background-color: $lightest;
+}
+
 .ltgray-bg {
     background-color: $ltgray;
 }
@@ -73,30 +77,82 @@ a.darkest-text {
 }
 
 .btn-sm, .btn-md, .btn-lg, .btn-xl {
+    color: $lightest;
     display: inline-block;
     box-shadow: $lshadow;
     text-align: center;
     text-transform: uppercase;
+
+    &.white-bg {
+        color: $darkest;
+    }
 }
 
 .btn-sm {
-    min-width: 115px;
+    min-width: 125px;
     padding: 5px 10px;
 }
 
 .btn-md {
-    min-width: 150px;
+    min-width: 175px;
     padding: 10px 20px;
 }
 
 .btn-lg {
-    min-width: 200px;
+    min-width: 250px;
     padding: 15px 30px;
 }
 
 .btn-xl {
-    min-width: 250px;
+    min-width: 300px;
     padding: 20px 45px;
+}
+
+.slick-prev,
+.slick-next {
+    background-color: $accent;
+    border-radius: 20px;
+    box-shadow: $lshadow;
+    height: 40px;
+    transition: $mtrans;
+    width: 40px;
+    z-index: 10;
+
+    &:hover,
+    &:focus {
+        background-color: $darkest;
+        transition: $mtrans;
+
+        &:before {
+            color: $accent;
+        }
+    }
+
+    &:before {
+        color: $lightest;
+        font-family: $fa;
+        font-size: 40px;
+        line-height: 25px;
+    }
+}
+
+.slick-prev {
+    left: 10px;
+    padding: 0 5px 0 0;
+
+    &:before {
+        content: '\f104';
+       
+    }
+}
+
+.slick-next {
+    padding: 0 0 0 5px;
+    right: 10px;
+
+    &:before {
+        content: '\f105';
+    }
 }
 
 .widget {

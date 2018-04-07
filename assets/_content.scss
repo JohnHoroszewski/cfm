@@ -1,8 +1,8 @@
 .site-content {
-    margin: 100px 0 0 0;
+    margin: 95px 0 0 0;
 }
 
-// CTA MODULE
+// CTA MODULES
 .cta-module {
     background-attachment: fixed;
     background-position: center 0;
@@ -17,6 +17,18 @@
     }
 }
 
+.portfolio-cta-module {
+    color: $lightest;
+
+    .cta-text {
+        text-align: center;
+    }
+
+    &.lightest-bg {
+        color: $accent;
+    }
+}
+
 .cta-btn-block {
     margin: 0 0 10px 0;
     padding: 25px;
@@ -24,4 +36,22 @@
 
 .cta-snippet {
     margin: 0 0 20px 0;
+}
+
+// PAGE INTRO
+.page-intro {
+    color: $lightest;
+
+    .intro-block {
+        background-image: url( 'images/geometry-orange.png' );
+        padding: 20px 10px;
+    }
+
+}
+
+// HOMEPAGE
+.slide-content {
+    background-color: $accent;
+    color: $lightest;
+    overflow: hidden;
 }

@@ -108,12 +108,22 @@ add_action( 'after_setup_theme', 'cfm_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function cfm_scripts() {
+	// Enqueue slick CSS
+	wp_enqueue_style( 'cfm-slick-style', get_template_directory_uri() . '/css/slick.css' );
+
+	// Enqueue slick-theme CSS
+	wp_enqueue_style( 'cfm-slicktheme-style', get_template_directory_uri() . '/css/slick-theme.css' );
+
 	wp_enqueue_style( 'cfm-style', get_stylesheet_uri() );
 
 	// wp_enqueue_script( 'cfm-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'cfm-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	// Enqueue slick.js
+	wp_enqueue_script( 'cfm-slick-js', get_template_directory_uri() . '/js/slick.min.js', array(), '20151215', true );
+
+	// Enqueue custom.js
 	wp_enqueue_script( 'cfm-customjs', get_template_directory_uri() . '/js/custom.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

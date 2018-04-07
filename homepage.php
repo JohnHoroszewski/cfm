@@ -23,12 +23,12 @@ get_header(); ?>
                             <div class="slide-content">
                                 <h2><?php the_sub_field( 'slide_headinh' ); ?></h2>
                                 <div class="slide-text">
-                                    <?php the_sub_field( 'slide_content' ); ?>
-
-                                    <?php if ( get_sub_field( 'slide_cta_text' ) ) : ?>
-                                        <a style="<?php the_sub_field( 'slide_cta_color' ); ?> <?php the_sub_field( 'slide_cta_style' ); ?>" href="<?php the_sub_field( 'slide_cta_url' ); ?>"><?php the_sub_field( 'slide_cta_text' ); ?></a>
-                                    <?php endif; ?>
-
+                                    <div class="constrain">
+                                        <?php the_sub_field( 'slide_content' ); ?>
+                                        <?php if ( get_sub_field( 'slide_cta_text' ) ) : ?>
+                                            <a style="<?php the_sub_field( 'slide_cta_color' ); ?> <?php the_sub_field( 'slide_cta_style' ); ?>" href="<?php the_sub_field( 'slide_cta_url' ); ?>"><?php the_sub_field( 'slide_cta_text' ); ?></a>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -38,22 +38,35 @@ get_header(); ?>
 
             </section><!-- .slider -->
 
-            <section class="cta-module parallax" style="background-image:url( '<?php echo get_theme_mod( 'cfm_cta_background_image' ); ?>' );">
+            <section class="page-intro p50">
+                <div class="constrain">
+                    <div class="intro-block">
+                        <h2>
+                            <?php the_field( 'intro_title' ); ?>
+                        </h2>
+                        <div class="intro-text">
+                            <?php the_field( 'intro_text' ); ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-module parallax" style="background-image:url( '<?php echo get_theme_mod( 'theme_cta_background_image' ); ?>' );">
                 <div class="constrain flexxed">
 
                     <div class="cta-content p50">
-                        <h3><?php echo get_theme_mod( 'cfm_cta_heading' ); ?></h3>
+                        <h3><?php echo get_theme_mod( 'theme_cta_heading' ); ?></h3>
                         <div class="text-block">
-                            <?php echo get_theme_mod( 'cfm_cta_text' ); ?>
+                            <?php echo get_theme_mod( 'theme_cta_text' ); ?>
                         </div>
                     </div>
 
                     <div class="cta-btn-block dkgray-bg">
                         <div class="cta-snippet">
-                            <?php echo get_theme_mod( 'cfm_cta_button_snippet' ); ?>
+                            <?php echo get_theme_mod( 'theme_cta_button_snippet' ); ?>
                         </div>
-                        <a class="accent-bg btn-md" href="<?php echo get_theme_mod( 'cfm_cta_button_url' ); ?>">
-                            <?php echo get_theme_mod( 'cfm_cta_button_text' ); ?>
+                        <a class="accent-bg btn-md" href="<?php echo get_theme_mod( 'theme_cta_button_url' ); ?>">
+                            <?php echo get_theme_mod( 'theme_cta_button_text' ); ?>
                         </a>
                     </div>
 

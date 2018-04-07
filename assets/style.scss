@@ -290,9 +290,10 @@ optgroup,
 textarea {
 	color: #404040;
 	font-family: $content;
-	font-size: 16px;
 	font-size: 1rem;
-	font-weight: 300;
+	font-size: 18px;
+	font-weight: 100;
+	letter-spacing: 0.25px;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 }
