@@ -17,7 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-	<style>.home-slider { display: none; }</style>
+	<style>.home-slider, .testimonial-slider { display: none; }</style>
 	<?php wp_head(); ?>
 </head>
 

@@ -159,6 +159,23 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Testimonial Settings',
+		'menu_title'	=> 'Testimonials Settings',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+}
+
 // Remove Admin Bar
 add_filter('show_admin_bar', '__return_false');
 

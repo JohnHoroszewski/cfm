@@ -49,9 +49,118 @@
 
 }
 
+// RECENT WORK MODULE
+.recent-work {
+
+    .constrain {
+        text-align: center;
+    }
+
+    .big-title {
+        margin: 0 0 10px 0;
+    }
+}
+
+.recent-work-item {
+    margin: 0 0 10px 0;
+    position: relative;
+
+    .overlay {
+        background-color: rgba( $darkest, 0.65 );
+        color: $lightest;
+        display: block;
+        height: 100%;
+        left: 0;
+        padding: 70px 0 0 0;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        transition: $strans;
+        width: 100%;
+    }
+
+    h4 {
+        font-weight: 700;
+    }
+
+    .client-sector {
+        margin: 0 0 10px 0;
+    }
+}
+
+// TESTIMONIAL MODULE
+.testimonials {
+    font-weight: 300;
+
+    .testimonial-intro {
+        border-bottom: 4px solid $accent;
+        margin: 0 0 10px 0;
+        padding: 0 0 10px 0;
+    }
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 50px;
+    }
+
+    .slick-dots {
+        bottom: -45px;
+
+        li {
+            background-color: $dkgray;
+
+            &.slick-active {
+                background-color: $accent;
+            }
+
+            button {
+
+                &:before {
+                    content: '';
+                }
+            }
+        }
+    }
+
+    .client-name {
+        font-weight: 500;
+        padding: 20px 0 0 0;
+        text-align: right;
+    }
+
+    .client-business {
+        color: $accent;
+        font-style: italic;
+        font-weight: 100;
+        text-align: right;
+    }
+}
+
+.testimonial-slide {
+    outline: 0;
+    box-shadow: none;
+
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
 // HOMEPAGE
 .slide-content {
     background-color: $accent;
     color: $lightest;
     overflow: hidden;
+}
+
+.industry-block {
+    background-image: url( 'images/gray-geometry-bg.png' );
+    color: $lightest;
+    padding: 20px 10px;
+}
+
+.industries-text {
+
+    .text {
+        margin: 0 0 10px 0;
+    }
 }

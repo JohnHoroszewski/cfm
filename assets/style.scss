@@ -306,6 +306,10 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
 	margin: 0 0 1em 0;
+
+	&:last-of-type {
+		margin: 0;
+	}
 }
 
 dfn, cite, em, i {
@@ -552,6 +556,10 @@ a:focus {
 	-webkit-transition: $mtrans;
 	-o-transition: $mtrans;
 	transition: $mtrans;
+}
+
+:focus {
+	outline: none;
 }
 
 a:hover, a:active {

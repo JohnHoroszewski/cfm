@@ -1,5 +1,10 @@
 @media only screen and ( min-width: 568px ) {
 
+    // CLASSES
+    .big-title {
+        font-size: 34px;
+    }
+
     // HEADER
     .header-contact {
         margin: 0;
@@ -31,6 +36,53 @@
     // GENERAL CONTENT
     .site-content {
         margin: 117px 0 0 0;
+    }
+
+    // RECENT WORK MODULE
+    .recent-work {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        }
+
+        .big-title {
+            margin: 0 0 15px 0;
+        }
+    }
+
+    .recent-work-item {
+        border: 1px solid $accent;
+        margin: 0;
+        width: 50%;
+
+        .overlay {
+            position: absolute;
+            padding: 0;
+
+            .client-info-container {
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY( -50% );
+            }
+        }
+    }
+    
+    // HOMEPAGE
+    .industries-list {
+
+        ul {
+            -webkit-column-count: 2;
+                    column-count: 2;
+            -webkit-column-gap: 40px;
+                    column-gap: 40px;
+        }
     }
 
     // FOOTER
@@ -111,6 +163,7 @@
         }
     }
 
+    // PORTFOLIO MODULE
     .portfolio-cta-module {
         
         .flexxed {
@@ -141,6 +194,58 @@
        width: 33%;
     }
     
+    // PAGE INTRO
+    .page-intro {
+        margin: 0 0 -75px 0;
+
+        .constrain {
+            position: relative;
+        }
+
+        .intro-block {
+            padding: 25px;
+            position: relative;
+            top: -75px;
+        }
+
+        .intro-text {
+            -webkit-column-count: 2;
+                    column-count: 2;
+            -webkit-column-gap: 30px;
+                    column-gap: 30px;
+        }
+    }
+
+    // HOMEPAGE
+    .industries {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    .industry-block {
+        padding: 25px;
+
+        h2 {
+            width: 32%;
+        }
+    }
+
+    .industries-text {
+        width: 65%;
+
+        .text {
+            margin: 0 0 15px 0;
+        }
+    }
+
     // FOOTER
     .top-footer {
         padding: 30px 0 20px 0;
@@ -148,6 +253,39 @@
 }
 
 @media only screen and ( min-width: 960px ) {
+
+    // CLASSES
+    .p50 {
+        padding: 35px 0;
+    }
+
+    .m35 {
+        margin: 27px 0;
+    }
+    
+    .mt35 {
+        margin: 27px 0 0 0;
+    }
+    
+    .mb35 {
+        margin: 0 0 27px 0;
+    }
+    
+    .m50 {
+        margin: 35px 0;
+    }
+    
+    .mt50 {
+        margin: 35px 0 0 0;
+    }
+    
+    .mb50 {
+        margin: 0 0 35px 0;
+    }
+
+    .bit-title {
+        font-size: 37px;
+    }
 
     // HEADER
     .site-branding {
@@ -172,6 +310,33 @@
         }
     }
 
+   // RECENT WORK MODULE
+   .recent-work {
+
+        .big-title {
+            margin: 0 0 20px 0;
+        }
+   }
+
+    .recent-work-item {
+        border-bottom: 0;
+        border-top: 0;
+        width: 25%;
+
+        &:first-of-type {
+            border-left: 0;
+        }
+
+        &:last-of-type {
+            border-right: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            padding: 0;
+        }
+    }    
+
     // CTA-MODULE
     .cta-content {
         width: 70%;
@@ -193,6 +358,15 @@
 
 @media only screen and ( min-width: 1024px ) {
 
+    // CLASSES
+    .bit-title {
+        font-size: 43px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
     // CTA-MODULE
     .cta-content {
 
@@ -204,9 +378,108 @@
     .cta-snippet {
         font-size: 18px;
     }
+
+    // RECENT WORK MODULE
+    .recent-work-item {
+        border: 0;
+        overflow: hidden;
+
+        .overlay {
+            background-color: rgba( $accent, 0.85 );
+            top: 100%;
+
+            .view-project,
+            .see-more {
+                background-color: $lightest;
+                color: $darkest;
+
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+
+        &:hover {
+
+            .overlay {
+                top: 0;
+            }
+        }
+    }
+
+     // PAGE INTRO
+     .page-intro {
+        margin: 0 0 -105px 0;
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .intro-block {
+            padding: 35px;
+            top: -105px;
+
+            h2 {
+                width: 31%;
+            }
+
+            .intro-text {
+                width: 66%;
+            }
+        }
+     }
+
+    // HOMEPAGE
+    .industry-block {
+        padding: 35px;
+    }
+
+    .industries-list {
+        
+        ul {
+            -webkit-column-count: 3;
+                    column-count: 3;
+            -webkit-column-gap: 30px;
+                    column-gap: 30px;
+        }
+    }
 }
 
 @media only screen and ( min-width: 1100px ) {
+
+    .p50 {
+        padding: 50px 0;
+    }
+
+    .m35 {
+        margin: 35px 0;
+    }
+    
+    .mt35 {
+        margin: 35px 0 0 0;
+    }
+    
+    .mb35 {
+        margin: 0 0 35px 0;
+    }
+    
+    .m50 {
+        margin: 50px 0;
+    }
+    
+    .mt50 {
+        margin: 50px 0 0 0;
+    }
+    
+    .mb50 {
+        margin: 0 0 50px 0;
+    }
 
     // HEADER
     .main-navigation {
@@ -250,5 +523,20 @@
 
     .cta-snippet {
         font-size: 22px;
+    }
+
+    // PAGE INTRO
+    .page-intro {
+        margin: 0 0 -125px 0;
+
+        .intro-block {
+            padding: 50px;
+            top: -125px;
+        }
+    }
+
+    // HOMEPAGE
+    .industry-block {
+        padding: 50px;
     }
 }

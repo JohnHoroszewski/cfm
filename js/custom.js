@@ -6,6 +6,13 @@ jQuery( document ).ready( function( $ ){
   
     $( '.home-slider' ).slick();
 
+    $( '.testimonial-slider' ).slick({
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 4500,
+        dots: true
+    });
+
     // Initialize if window under 568px
     if ( $winW < 568 ) {
 
