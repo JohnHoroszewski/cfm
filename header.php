@@ -45,7 +45,7 @@
 		<div class="main-header">
 			<div class="constrain">
 				<div class="site-branding">
-						<a class="top-logo" style="background-image:url('<?php echo get_theme_mod( 'cfm_logo' ); ?>');" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						<a class="top-logo" style="background-image:url('<?php echo get_theme_mod( 'theme_logo' ); ?>');" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation">

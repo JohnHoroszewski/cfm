@@ -65,6 +65,7 @@
 		</div><!-- .bottom-footer -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+<a href="#" class="back-to-top"></a>
 
 <?php wp_footer(); ?>
 

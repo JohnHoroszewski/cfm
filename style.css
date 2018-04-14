@@ -1,7 +1,50 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Montserrat:100,400,600,700,900");
+/*!
+Theme Name: Clever Fox Media
+Theme URI: http://underscores.me/
+Author: John Horoszewski
+Author URI: http://johnswork.com
+Description: Custom wordpress theme for Clever Fox Media
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: cfm
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Clever Fox Media is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Montserrat:100,400,600,700,900");
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -247,7 +290,7 @@ textarea {
   font-size: 18px;
   font-weight: 100;
   letter-spacing: 0.25px;
-  line-height: 1.5;
+  line-height: 1.62;
   text-rendering: optimizeLegibility;
 }
 
@@ -379,6 +422,7 @@ table {
 }
 
 body {
+  background-attachment: fixed;
   background-image: url("images/geometry.png");
 }
 
@@ -574,6 +618,11 @@ a:hover, a:active {
 .main-navigation li {
   float: left;
   position: relative;
+}
+
+.main-navigation li.current_page_item a {
+  color: #fa8d00;
+  font-weight: 700;
 }
 
 .main-navigation a {
@@ -871,8 +920,15 @@ a.top-logo {
 }
 
 .recent-work-item {
-  margin: 0 0 10px 0;
+  border-bottom: 1px solid #fa8d00;
+  border-top: 1px solid #fa8d00;
   position: relative;
+}
+.recent-work-item:first-of-type {
+  border-top: 0;
+}
+.recent-work-item:last-of-type {
+  border-bottom: 0;
 }
 .recent-work-item .overlay {
   background-color: rgba(18, 18, 18, 0.65);
@@ -880,12 +936,20 @@ a.top-logo {
   display: block;
   height: 100%;
   left: 0;
-  padding: 70px 0 0 0;
   position: absolute;
   text-align: center;
   top: 0;
   transition: all 0.5s ease;
   width: 100%;
+}
+.recent-work-item .overlay .client-info-container {
+  left: 0;
+  margin: 0 auto;
+  max-width: 85%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .recent-work-item h4 {
   font-weight: 700;
@@ -944,6 +1008,38 @@ a.top-logo {
   overflow: hidden;
 }
 
+.service-item {
+  background-color: #464646;
+  color: white;
+}
+.service-item.flexxed {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.service-content-container {
+  padding: 20px;
+  text-align: center;
+}
+.service-content-container p {
+  font-weight: 100;
+  margin: 0 0 20px 0;
+}
+
+.service-image {
+  display: block;
+  height: 150px;
+  max-width: none;
+  overflow: hidden;
+  width: 100%;
+}
+.service-image img {
+  display: block;
+  width: 100%;
+}
+
 .industry-block {
   background-image: url("images/gray-geometry-bg.png");
   color: white;
@@ -954,9 +1050,31 @@ a.top-logo {
   margin: 0 0 10px 0;
 }
 
+.industries-list ul li {
+  padding: 0 0 0 20px;
+  position: relative;
+}
+.industries-list ul li:before {
+  background-color: #fa8d00;
+  content: '';
+  display: block;
+  height: 10px;
+  left: 0;
+  position: absolute;
+  top: 8px;
+  width: 10px;
+}
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
+.site-footer a:hover {
+  color: white;
+}
+.site-footer a:hover > svg {
+  color: white;
+}
+
 .top-footer {
   background-color: #464646;
   color: white;
@@ -964,6 +1082,13 @@ a.top-logo {
 }
 .top-footer a {
   color: #b2b2b2;
+}
+.top-footer .textwidget p {
+  margin: 0 0 10px 0;
+}
+
+.cfrp-footer-excerpt p {
+  margin: 0 0 10px 0;
 }
 
 .bottom-footer {
@@ -1099,6 +1224,16 @@ object {
 /*--------------------------------------------------------------
 ## Helper Classes
 --------------------------------------------------------------*/
+::-webkit-selection {
+  background-color: #443b68;
+  color: white;
+}
+
+::selection {
+  background-color: #443b68;
+  color: white;
+}
+
 .constrain {
   display: block;
   margin: 0 auto;
@@ -1369,13 +1504,6 @@ a.darkest-text {
     position: absolute;
     padding: 0;
   }
-  .recent-work-item .overlay .client-info-container {
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
 
   .industries-list ul {
     -webkit-column-count: 2;
@@ -1430,6 +1558,10 @@ a.darkest-text {
 
   .cta-btn-block {
     margin: 0;
+  }
+
+  .service-image {
+    height: 250px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1510,8 +1642,42 @@ a.darkest-text {
     margin: 0 0 15px 0;
   }
 
+  .service-item.flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .service-item:nth-of-type(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  .service-content-container {
+    width: 50%;
+  }
+
+  .service-image {
+    height: initial;
+    position: relative;
+    width: 50%;
+  }
+  .service-image img {
+    height: 400px;
+    max-width: none;
+    position: absolute;
+    width: auto;
+  }
+
   .top-footer {
     padding: 30px 0 20px 0;
+  }
+}
+@media only screen and (min-width: 860px) {
+  .service-content-container {
+    padding: 40px;
   }
 }
 @media only screen and (min-width: 960px) {
@@ -1545,6 +1711,10 @@ a.darkest-text {
 
   .bit-title {
     font-size: 37px;
+  }
+
+  h2 {
+    font-size: 32px;
   }
 
   .site-branding {
@@ -1598,6 +1768,40 @@ a.darkest-text {
     width: 27%;
   }
 
+  .testimonials .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .testimonials .testimonial-intro {
+    border-bottom: 0;
+    border-right: 4px solid #fa8d00;
+    padding: 20px 20px 0 20px;
+    width: 32%;
+  }
+  .testimonials .testimonial-slider {
+    padding: 20px 0;
+    width: 65%;
+  }
+  .testimonials .slick-dots {
+    bottom: -25px;
+  }
+
+  .service-content-container h2 {
+    margin: 0 0 24px 0;
+  }
+  .service-content-container p {
+    margin: 0 0 30px 0;
+  }
+
+  .service-image img {
+    height: 500px;
+  }
+
   .footer-col {
     width: 23%;
   }
@@ -1609,6 +1813,16 @@ a.darkest-text {
 
   h2 {
     font-size: 35px;
+  }
+
+  .top-header {
+    height: 37px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  .top-header.scrolled {
+    height: 0;
+    padding: 0;
   }
 
   .cta-content h3 {
@@ -1663,6 +1877,13 @@ a.darkest-text {
     width: 66%;
   }
 
+  .service-content-container {
+    padding: 50px;
+  }
+  .service-content-container p {
+    margin: 0 0 40px 0;
+  }
+
   .industry-block {
     padding: 35px;
   }
@@ -1712,6 +1933,13 @@ a.darkest-text {
   }
   .cta-content .text-block {
     font-size: 21px;
+  }
+
+  .service-content-container h2 {
+    margin: 0 0 45px 0;
+  }
+  .service-content-container p {
+    margin: 0 0 45px 0;
   }
 }
 @media only screen and (min-width: 1200px) {

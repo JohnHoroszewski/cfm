@@ -17,9 +17,9 @@ Clever Fox Media is based on Underscores https://underscores.me/, (C) 2012-2017 
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css
-
-//*--------------------------------------------------------------
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
@@ -41,12 +41,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-
-@import "vars";
-
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+
+@import "vars";
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -294,7 +294,7 @@ textarea {
 	font-size: 18px;
 	font-weight: 100;
 	letter-spacing: 0.25px;
-	line-height: 1.5;
+	line-height: 1.62;
 	text-rendering: optimizeLegibility;
 }
 
@@ -617,6 +617,17 @@ a:hover, a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
+}
+
+.main-navigation li {
+
+	&.current_page_item {
+
+		a {
+			color: $accent;
+			font-weight: 700;
+		}
+	}	
 }
 
 .main-navigation a {

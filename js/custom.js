@@ -8,8 +8,8 @@ jQuery( document ).ready( function( $ ){
 
     $( '.testimonial-slider' ).slick({
         arrows: false,
-        autoplay: true,
-        autoplaySpeed: 4500,
+        // autoplay: true,
+        // autoplaySpeed: 4500,
         dots: true
     });
 
@@ -31,14 +31,23 @@ jQuery( document ).ready( function( $ ){
         });
     }
 
-    $( window ).scroll( function(){
+    $( window ).scroll( function() {
 
 		var $parallax = $( '.parallax' ),
-			wScroll = $( this ).scrollTop();
-
+            $wScroll = $( this ).scrollTop(),
+            $itemPos = $parallax.offset(),
+            $compScroll = $wScroll - $itemPos.top;
+            
 		$parallax.css({
-			'background-position-y' : -wScroll /8,
-		});
-	});
-
+			'background-position-y' :  -$compScroll /8  ,
+        });
+        
+        if ( $(window).width() > 1023 ) {
+            if ( $wScroll > 400 ) {
+                $( '.top-header' ).addClass( 'scrolled' );
+            } else {
+                $( '.top-header' ).removeClass( 'scrolled' );
+            }
+        }
+    });
 });

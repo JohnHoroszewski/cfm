@@ -1,3 +1,14 @@
+.site-footer {
+
+    a:hover {
+        color: $lightest;
+
+        & > svg {
+            color: $lightest;
+        }
+    }
+}
+
 .top-footer {
     background-color: $dkgray;
     color: $lightest;
@@ -5,6 +16,20 @@
 
     a {
         color: $ltgray;
+    }
+
+    .textwidget {
+
+        p {
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+.cfrp-footer-excerpt {
+
+    p {
+        margin: 0 0 10px 0;
     }
 }
 

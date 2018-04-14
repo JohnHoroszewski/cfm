@@ -1,3 +1,13 @@
+::-webkit-selection {
+    background-color: #443b68;
+    color: $lightest;
+}
+
+::selection {
+    background-color: #443b68;
+    color: $lightest;
+}
+
 .constrain {
     display: block;
     margin: 0 auto;

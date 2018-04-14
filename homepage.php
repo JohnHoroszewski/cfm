@@ -51,6 +51,31 @@ get_header(); ?>
                 </div>
             </section>
 
+            <section class="services-list p50">
+                <div class="constrain">
+
+                    <?php
+                        query_posts( array( 'post_type' => 'service', 'orderby' => 'menu_order', 'showposts' => -1 ) ); ?>
+                        <?php while ( have_posts() ) : the_post(); ?>
+
+                            <div class="service-item flexxed">
+                                <div class="service-content-container">
+                                    <div class="service-content">
+                                        <h2><?php the_title(); ?></h2>
+                                        <?php the_excerpt(); ?>
+                                        <a class="btn-lg accent-bg" href="<?php the_permalink(); ?>">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="service-image">
+                                    <?php the_post_thumbnail(); ?>
+                                </div>
+                            </div>
+
+                        <?php endwhile; ?>
+                    <?php wp_reset_query(); ?>
+                </div><!-- .constrain -->
+            </section><!-- .services-list -->
+
             <section class="cta-module parallax <?php the_field( 'module_margin' ); ?>" style="background-image:url( '<?php echo get_theme_mod( 'theme_cta_background_image' ); ?>' );">
                 <div class="constrain flexxed">
 
