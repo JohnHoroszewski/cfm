@@ -144,6 +144,7 @@ sub {
 
 img {
   border: 0;
+  display: block;
 }
 
 svg:not(:root) {
@@ -884,6 +885,12 @@ a.top-logo {
 .cta-module a {
   color: white;
 }
+.cta-module .cta-btn-block {
+  font-weight: 300;
+}
+.cta-module .cta-btn-block.accent-bg .accent-text {
+  color: #464646;
+}
 
 .portfolio-cta-module {
   color: white;
@@ -1065,6 +1072,61 @@ a.top-logo {
   width: 10px;
 }
 
+.page-banner {
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  padding: 25px 0 20px;
+}
+
+.client-intro .intro-text {
+  margin: 0 0 20px 0;
+}
+.client-intro h5 {
+  font-size: 18px;
+}
+.client-intro .intro-share {
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  margin: 0 0 20px 0;
+  padding: 10px 0;
+}
+.client-intro .intro-share h5 {
+  margin: 0;
+}
+.client-intro .intro-share a {
+  color: #464646;
+  margin: 0 15px 0 0;
+}
+.client-intro .intro-share a:hover > svg {
+  color: white;
+}
+.client-intro .detail {
+  border-bottom: 1px solid white;
+  margin: 0 0 5px 0;
+  padding: 0 0 5px 0;
+  overflow: hidden;
+}
+.client-intro .client-website {
+  margin: 20px 0 0;
+}
+
+.project-details {
+  margin: 0 0 10px 0;
+}
+.project-details .detail {
+  display: block;
+  margin: 0 0 10px 0;
+}
+.project-details .detail-title {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.client-additional {
+  color: white;
+}
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
@@ -1081,7 +1143,7 @@ a.top-logo {
   padding: 20px 0;
 }
 .top-footer a {
-  color: #b2b2b2;
+  color: #cdcdcd;
 }
 .top-footer .textwidget p {
   margin: 0 0 10px 0;
@@ -1291,7 +1353,7 @@ a.accent-text {
 
 .ltgray-text,
 a.ltgray-text {
-  color: #b2b2b2;
+  color: #cdcdcd;
 }
 
 .dkgray-text,
@@ -1304,6 +1366,11 @@ a.darkest-text {
   color: #464646;
 }
 
+.white-text,
+a.white-text {
+  color: white;
+}
+
 .accent-bg {
   background-color: #fa8d00;
 }
@@ -1313,7 +1380,7 @@ a.darkest-text {
 }
 
 .ltgray-bg {
-  background-color: #b2b2b2;
+  background-color: #cdcdcd;
 }
 
 .dkgray-bg {
@@ -1346,7 +1413,7 @@ a.darkest-text {
   color: #121212;
 }
 .btn-auto.accent-bg:hover, .btn-sm.accent-bg:hover, .btn-md.accent-bg:hover, .btn-lg.accent-bg:hover, .btn-xl.accent-bg:hover {
-  background-color: #b2b2b2;
+  background-color: #cdcdcd;
 }
 .btn-auto.ltgray-bg:hover, .btn-sm.ltgray-bg:hover, .btn-md.ltgray-bg:hover, .btn-lg.ltgray-bg:hover, .btn-xl.ltgray-bg:hover {
   background-color: #fa8d00;
@@ -1512,6 +1579,10 @@ a.darkest-text {
     column-gap: 40px;
   }
 
+  .page-banner {
+    padding: 35px 0 30px;
+  }
+
   .top-footer .flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1600,8 +1671,12 @@ a.darkest-text {
     width: 33%;
   }
 
-  .page-intro {
+  .page-template-homepage .page-intro {
     margin: 0 0 -75px 0;
+  }
+
+  .page-intro {
+    margin: 0 0 -95px 0;
   }
   .page-intro .constrain {
     position: relative;
@@ -1669,6 +1744,74 @@ a.darkest-text {
     max-width: none;
     position: absolute;
     width: auto;
+  }
+
+  .page-banner {
+    padding: 35px 0 60px;
+  }
+
+  .client-intro.flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .client-intro .detail {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    margin: 0 0 5px 0;
+    padding: 0 0 5px 0;
+    overflow: hidden;
+  }
+  .client-intro .project-text,
+  .client-intro .project-details {
+    width: 48%;
+  }
+  .client-intro .detail-title {
+    float: left;
+    width: 43.5%;
+  }
+  .client-intro .detail-content {
+    display: block;
+    float: left;
+    padding: 0 0 0 10px;
+    max-width: 55%;
+  }
+  .client-intro .intro-text {
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+  .client-intro .intro-share {
+    border-bottom: 0;
+  }
+
+  .top-images .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .top-images .third-width {
+    overflow: hidden;
+    width: 31.5%;
+  }
+  .top-images .twothird-width {
+    overflow: hidden;
+    width: 66%;
+  }
+  .top-images .full-width {
+    display: block;
+    width: 100%;
+  }
+  .top-images .full-width img {
+    margin: 0 auto;
   }
 
   .top-footer {
@@ -1802,6 +1945,19 @@ a.darkest-text {
     height: 500px;
   }
 
+  .client-intro .project-text {
+    width: 48%;
+  }
+  .client-intro .project-details {
+    width: 48%;
+  }
+  .client-intro .project-text {
+    width: 56.5%;
+  }
+  .client-intro .project-details {
+    width: 40%;
+  }
+
   .footer-col {
     width: 23%;
   }
@@ -1854,8 +2010,12 @@ a.darkest-text {
     top: 0;
   }
 
-  .page-intro {
+  .page-template-homepage .page-intro {
     margin: 0 0 -105px 0;
+  }
+
+  .page-intro {
+    margin: 0 0 -125px 0;
   }
   .page-intro .flexxed {
     -webkit-box-orient: horizontal;
@@ -1877,6 +2037,13 @@ a.darkest-text {
     width: 66%;
   }
 
+  .page-banner {
+    padding: 45px 0 100px;
+  }
+  .page-banner .big-title {
+    font-size: 45px;
+  }
+
   .service-content-container {
     padding: 50px;
   }
@@ -1893,6 +2060,27 @@ a.darkest-text {
     column-count: 3;
     -webkit-column-gap: 30px;
     column-gap: 30px;
+  }
+
+  .page-intro .client-intro .intro-text {
+    width: 100%;
+  }
+
+  .client-intro .project-text {
+    width: 63%;
+  }
+  .client-intro .intro-text {
+    width: 100%;
+  }
+  .client-intro .project-details {
+    width: 33%;
+  }
+
+  .intro-share h5, .intro-share .share-icons {
+    display: inline-block;
+  }
+  .intro-share .share-icons {
+    margin: 0 0 0 20px;
   }
 }
 @media only screen and (min-width: 1100px) {
@@ -1961,8 +2149,12 @@ a.darkest-text {
     font-size: 22px;
   }
 
-  .page-intro {
+  .page-template-homepage .page-intro {
     margin: 0 0 -125px 0;
+  }
+
+  .page-intro {
+    margin: 0 0 -175px 0;
   }
   .page-intro .intro-block {
     padding: 50px;
@@ -1971,5 +2163,9 @@ a.darkest-text {
 
   .industry-block {
     padding: 50px;
+  }
+
+  .page-banner {
+    padding: 45px 0 110px;
   }
 }

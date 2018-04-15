@@ -15,6 +15,17 @@
     a {
         color: $lightest;
     }
+
+    .cta-btn-block {
+        font-weight: 300;
+
+        &.accent-bg {
+
+            .accent-text {
+                color: $dkgray;
+            }
+        }
+    }
 }
 
 .portfolio-cta-module {
@@ -238,4 +249,76 @@
             }
         }
     }
+}
+
+// PAGE BANNER
+.page-banner {
+    background-position: center center;
+    background-size: cover;
+    color: $lightest;
+    padding: 25px 0 20px;
+}
+
+// CLIENT PAGE
+.client-intro {
+    
+    .intro-text {
+        margin: 0 0 20px 0;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    .intro-share {
+        border-bottom: 2px solid $lightest;
+        border-top: 2px solid $lightest;
+        margin: 0 0 20px 0;
+        padding: 10px 0;
+
+        h5 {
+            margin: 0;
+        }
+
+        a {
+            color: $dkgray;
+            margin: 0 15px 0 0;
+
+            &:hover {
+
+                > svg {
+                    color: $lightest;
+                }
+            }
+        }
+    }
+
+    .detail {
+        border-bottom: 1px solid $lightest;
+        margin: 0 0 5px 0;
+        padding: 0 0 5px 0;
+        overflow: hidden;
+    }
+
+    .client-website {
+        margin: 20px 0 0;
+    }
+}
+
+.project-details {
+    margin: 0 0 10px 0;
+
+    .detail {
+        display: block;
+        margin: 0 0 10px 0;
+    }
+
+    .detail-title {
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
+
+.client-additional {
+    color: $lightest;
 }

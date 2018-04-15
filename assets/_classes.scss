@@ -78,6 +78,11 @@ a.darkest-text {
     color: $dkgray;
 }
 
+.white-text,
+a.white-text {
+    color: $lightest;
+}
+
 .accent-bg {
     background-color: $accent;
 }

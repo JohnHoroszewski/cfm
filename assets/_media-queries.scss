@@ -77,6 +77,11 @@
         }
     }
 
+    // PAGE BANNER
+    .page-banner {
+        padding: 35px 0 30px;
+    }
+
     // FOOTER
     .top-footer {
 
@@ -192,8 +197,15 @@
     }
     
     // PAGE INTRO
+    .page-template-homepage {
+
+        .page-intro {
+            margin: 0 0 -75px 0;
+        }
+     }
+
     .page-intro {
-        margin: 0 0 -75px 0;
+        margin: 0 0 -95px 0;
 
         .constrain {
             position: relative;
@@ -243,7 +255,6 @@
         }
     }
 
-    // HOMEPAGE
     .service-item {
 
         &.flexxed {
@@ -275,6 +286,92 @@
             max-width: none;
             position: absolute;
             width: auto;
+        }
+    }
+
+    // PAGE BANNER
+    .page-banner {
+        padding: 35px 0 60px;
+    }
+
+    // CLIENT PAGE
+    .client-intro {
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .detail {
+            border-bottom: 1px solid rgba( $lightest, 0.35 );
+            margin: 0 0 5px 0;
+            padding: 0 0 5px 0;
+            overflow: hidden;
+        }
+
+        .project-text,
+        .project-details {
+            width: 48%;
+        }
+
+        .detail-title {
+            float: left;
+            width: 43.5%;
+        }
+
+        .detail-content {
+            display: block;
+            float: left;
+            padding: 0 0 0 10px;
+            max-width: 55%;
+        }
+
+        .intro-text {
+            -webkit-column-count: 1;
+                    column-count: 1;
+        }
+
+        .intro-share {
+            border-bottom: 0;
+        }
+    }
+
+    .top-images {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .third-width {
+            overflow: hidden;
+            width: 31.5%;
+        }
+    
+        .twothird-width {
+            overflow: hidden;
+            width: 66%
+        }
+
+        .full-width {
+            display: block;
+            width: 100%;
+
+            img {
+                margin: 0 auto;
+            }
         }
     }
 
@@ -443,6 +540,26 @@
         }
     }
 
+    // CLIENT PAGE
+    .client-intro {
+
+        .project-text {
+            width: 48%;
+        }
+
+        .project-details {
+            width: 48%;
+        }
+
+        .project-text {
+            width: 56.5%;
+        }
+
+        .project-details {
+            width: 40%;
+        }
+    }
+
     // FOOTER
     .footer-col {
         width: 23%;
@@ -513,8 +630,15 @@
     }
 
      // PAGE INTRO
+     .page-template-homepage {
+
+        .page-intro {
+            margin: 0 0 -105px 0;
+        }
+     }
+
      .page-intro {
-        margin: 0 0 -105px 0;
+        margin: 0 0 -125px 0;
 
         .flexxed {
             -webkit-box-orient: horizontal;
@@ -540,6 +664,15 @@
         }
      }
 
+    // PAGE BANNER
+    .page-banner {
+        padding: 45px 0 100px;
+
+        .big-title {
+            font-size: 45px;
+        }
+    } 
+    
     // HOMEPAGE
     .service-content-container {
         padding: 50px;
@@ -560,6 +693,43 @@
                     column-count: 3;
             -webkit-column-gap: 30px;
                     column-gap: 30px;
+        }
+    }
+
+    // CLIENT PAGE
+    .page-intro {
+
+        .client-intro {
+
+            .intro-text {
+                width: 100%;
+            }
+        }
+    }
+
+    .client-intro {
+
+        .project-text {
+            width: 63%;
+        }
+
+        .intro-text {
+            width: 100%;
+        }
+
+        .project-details {
+            width: 33%;
+        }
+    }
+
+    .intro-share {
+
+        h5, .share-icons {
+            display: inline-block;
+        }
+
+        .share-icons {
+            margin: 0 0 0 20px;
         }
     }
 }
@@ -651,8 +821,15 @@
     }
 
     // PAGE INTRO
+    .page-template-homepage {
+
+        .page-intro {
+            margin: 0 0 -125px 0;
+        }
+     }
+
     .page-intro {
-        margin: 0 0 -125px 0;
+        margin: 0 0 -175px 0;
 
         .intro-block {
             padding: 50px;
@@ -663,5 +840,10 @@
     // HOMEPAGE
     .industry-block {
         padding: 50px;
+    }
+
+    // PAGE BANNER
+    .page-banner {
+        padding: 45px 0 110px;
     }
 }
