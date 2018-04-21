@@ -181,7 +181,8 @@
     overflow: hidden;
 }
 
-.service-item {
+.service-item,
+.client-item {
     background-color: $dkgray;
     color: $lightest;
 
@@ -193,7 +194,8 @@
     }
 }
 
-.service-content-container {
+.service-content-container,
+.client-content-container {
     padding: 20px;
     text-align: center;
 
@@ -203,7 +205,8 @@
     }
 }
 
-.service-image {
+.service-image,
+.client-image {
     display: block;
     height: 150px;
     max-width: none;

@@ -13,7 +13,7 @@
     <?php $pBanner = get_field( 'top_banner_image' ); ?>
     <div class="page-banner" style="background-image:url('<?php echo $pBanner[ 'url' ]; ?>');">
         <div class="constrain">
-            <div class="big-title">CLIENT</div>
+            <div class="big-title">Client</div>
         </div>
     </div>
     
@@ -33,7 +33,7 @@
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                            <!-- <a href="#"><i class="fab fa-pinterest"></i></a> -->
                             <a href="#"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
     </section><!-- .top-images -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
-    <section class="cta-module parallax <?php the_field( 'module_margin' ); ?>" style="background-image:url( '<?php echo get_theme_mod( 'theme_cta_background_image' ); ?>' );">
+<section class="cta-module parallax <?php the_field( 'module_margin' ); ?>" style="background-image:url( '<?php echo get_theme_mod( 'theme_cta_background_image' ); ?>' );">
     <div class="constrain flexxed">
 
         <div class="cta-content p50">
@@ -141,4 +141,4 @@
             </a>
         </div>
     </div><!-- .constrain -->
-    </section><!-- .cta-module -->
+</section><!-- .cta-module -->
