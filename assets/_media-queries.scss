@@ -385,6 +385,21 @@
         }
     }
 
+    // SERVICE PAGE
+    .page-intro {
+
+        .intro-block {
+
+            &.service-intro {
+                padding: 0;
+            }
+        }
+
+        .services-text {
+            padding: 20px;
+        }
+    }
+
     // FOOTER
     .top-footer {
         padding: 30px 0 20px 0;
@@ -397,6 +412,42 @@
     .service-content-container,
     .client-content-container {
         padding: 40px;
+    }
+
+    // SERVICE PAGE
+    .page-intro {
+
+        .service-intro {
+
+            &.flexxed {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: row;
+                        flex-direction: row;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
+            }
+        }
+
+        .services-text {
+            width: 50%;
+        }
+
+        .services-image {
+            overflow: hidden;
+            position: relative;
+            width: 50%;
+
+            img {
+                height: auto;
+                left: 50%;
+                margin: 0 auto;
+                max-width: none;
+                position: absolute;
+                transform: translateX( -50% );
+            }
+        }
     }
 }
 
@@ -743,6 +794,14 @@
 
         .share-icons {
             margin: 0 0 0 20px;
+        }
+    }
+
+    // SERVICE PAGE
+    .page-intro {
+
+        .services-text {
+            padding: 30px;
         }
     }
 }

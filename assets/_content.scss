@@ -325,3 +325,34 @@
 .client-additional {
     color: $lightest;
 }
+
+// SERVICE PAGE
+.page-intro {
+
+    .intro-block {
+
+        &.service-intro {
+            background-color: $dkgray;
+            background-image: none;
+        }
+    }
+
+    .service-intro {
+        padding: 0;
+
+        &.flexxed {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .service-text {
+        padding: 10px;
+    }
+}
+
+.service {
+    
+    h2 {
+        color: $accent;
+    }
+}
