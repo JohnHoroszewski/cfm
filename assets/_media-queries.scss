@@ -115,6 +115,14 @@
             }
         }
     }
+
+    // BLOG POST
+    .single-post {
+
+        .post-thumbnail {
+            margin: 0 0 15px 0;
+        }
+    }
 }
 
 @media only screen and ( min-width: 640px ) {
@@ -400,6 +408,148 @@
         }
     }
 
+    // CONTACT PAGE
+    .contact {
+
+        .page-intro {
+
+            .intro-text {
+                -webkit-column-count: 1;
+                        column-count: 1;
+            }
+        }
+
+        .contact-form {
+            padding: 25px;
+        }
+
+        input[type=submit] {
+            width: 300px;
+        }
+    }
+
+    .contact-blocks {
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .c-block {
+            margin: 0;
+            width: 30%;
+        }
+    }
+
+    .contact-form {
+        padding: 25px;
+
+        .col2, .col3 {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .col2 {
+
+            span {
+                width: 49%;
+            }
+        }
+
+        .col3 {
+
+            span {
+                width: 32%;
+            }
+        }
+    }
+
+    // BLOG INDEX
+    .blog {
+
+        .intro-block {
+            margin: 0 0 30px 0;
+        }
+    }
+
+    .blog-post {
+        margin: 0 0 30px 0;
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .post-text {
+            width: 48%;
+        }
+
+        .post-featured {
+            width: 48%;
+
+            a {
+                display: block;
+                height: 100%;
+            }
+        }
+
+        .post-thumbnail img {
+            height: 100%;
+            max-width: initial;
+            width: auto;
+        }
+    }
+
+    // BLOG POST
+    .single-post {
+        
+        .page-intro {
+            
+            .intro-block.flexxed {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                margin: 0 0 30px 0;
+            }
+        }
+
+        .entry-meta {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .post-thumbnail {
+            margin: 0 0 20px 0;
+        }
+    }
+
     // FOOTER
     .top-footer {
         padding: 30px 0 20px 0;
@@ -623,6 +773,30 @@
         }
     }
 
+    // CONTACT PAGE
+    .contact input,
+    .contact select {
+        margin: 0 0 20px 0;
+    }
+
+    // BLOG INDEX
+    .blog {
+
+        .intro-block {
+            margin: 0 0 50px 0;
+        }
+    }
+
+    .blog-post {
+
+        .post-thumbnail img {
+            height: 100%;
+            max-height: 300px;
+            max-width: initial;
+            width: auto;
+        }
+    }
+
     // FOOTER
     .footer-col {
         width: 23%;
@@ -804,6 +978,39 @@
             padding: 30px;
         }
     }
+
+    // CONTACT PAGE
+    .contact {
+
+        .page-intro {
+
+            .intro-text {
+                width: 100%;
+            }
+        }
+    }
+
+    // BLOG INDEX
+    .blog {
+
+        .intro-block {
+
+            &.flexxed {
+
+                h1 {
+                    width: 33%;
+                }
+            }
+        }
+    }
+
+    // BLOG POST
+    .single-post {
+
+        .post-thumbnail {
+            margin: 0 0 30px 0;
+        }
+    }
 }
 
 @media only screen and ( min-width: 1100px ) {
@@ -918,5 +1125,21 @@
     // PAGE BANNER
     .page-banner {
         padding: 45px 0 110px;
+    }
+
+    // CONTACT PAGE
+    .contact {
+
+        .contact-form {
+            padding: 50px;
+        }
+    }
+
+    // BLOG INDEX
+    .blog-post {
+
+        .post-thumbnail img {
+            max-height: 350px;
+        }
     }
 }

@@ -20,16 +20,32 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			if ( is_singular() ) : ?>
+			<?php else : ?>
+				<?php $pBanner = get_field( 'top_banner_image', 'option' ); ?>
+				<div class="page-banner" style="background-image:url('<?php echo $pBanner[ 'url' ]; ?>');">
+					<div class="constrain">
+						<div class="big-title">In Our Own Words</div>
+					</div>
+				</div>
+					
+				<section class="page-intro p50">
+					<div class="constrain">
+						<div class="intro-block flexxed">
+							<h1>
+								<?php the_field( 'blog_heading', 'option' ); ?>
+							</h1>
+							<div class="intro-text">
+								<?php the_field( 'blog_intro_text', 'option' ); ?>
+							</div>
+						</div>
+					</div><!-- .constrain -->
+				</section><!-- .page-intro -->
+			
+			<?php endif;
+			
+			/* Start the Loop */?>
+			<?php while ( have_posts() ) : the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -52,5 +68,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

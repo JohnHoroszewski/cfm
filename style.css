@@ -450,6 +450,15 @@ input {
   width: 100%;
 }
 
+textarea {
+  padding: 5px 15px;
+}
+
+select {
+  height: 40px;
+  padding: 5px 15px;
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -510,6 +519,8 @@ textarea:focus {
 
 select {
   border: 0;
+  border-radius: 0 !important;
+  width: 100%;
 }
 
 textarea {
@@ -776,7 +787,7 @@ a:hover, a:active {
 .site-header {
   position: fixed;
   width: 100%;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .top-header {
@@ -1151,6 +1162,138 @@ a.top-logo {
   color: #fa8d00;
 }
 
+.contact .intro-block h3 {
+  margin: 0 0 5px 0;
+}
+.contact .intro-text {
+  margin: 0 0 20px 0;
+}
+.contact .c-block {
+  margin: 0 0 20px 0;
+}
+.contact .c-block:last-of-type {
+  margin: 0;
+}
+.contact .c-block .social-icon {
+  font-size: 28px;
+  margin: 0 15px 0 0;
+}
+.contact .c-block .social-icon svg {
+  color: white;
+}
+.contact .contact-item {
+  padding: 0 0 0 15px;
+  position: relative;
+}
+.contact .contact-item:before {
+  color: #464646;
+  content: '\f101';
+  font-family: "FontAwesome";
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.contact .contact-form {
+  background-color: #464646;
+  color: white;
+  padding: 10px;
+}
+.contact input, .contact select {
+  margin: 0 0 10px 0;
+}
+.contact select {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+.contact input[type=submit] {
+  background-color: #fa8d00;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  margin: 10px 0 0 0;
+  text-transform: uppercase;
+}
+
+.gmap {
+  height: 300px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.blog .entry-header {
+  position: relative;
+  z-index: 999;
+}
+.blog article:nth-of-type(even) h2 a {
+  color: #464646;
+}
+.blog article:nth-of-type(odd) .btn-lg {
+  background-color: #464646;
+}
+
+.blog-post {
+  margin: 0 0 20px 0;
+}
+.blog-post.flexxed {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+.blog-post h2 a {
+  font-weight: 700;
+}
+.blog-post .post-thumbnail {
+  overflow: hidden;
+}
+.blog-post .post-thumbnail img {
+  height: auto;
+  margin: 0 0 10px 0;
+  width: 100%;
+}
+.blog-post .btn-lg {
+  float: right;
+  margin: 10px 0 0 0;
+}
+
+.single-post .intro-block a {
+  color: white !important;
+}
+.single-post .meta {
+  margin: 0 0 5px 0;
+}
+.single-post .meta:last-of-type {
+  margin: 0;
+}
+.single-post .post-thumbnail {
+  margin: 0 0 10px 0;
+}
+
+ul.meta-cat-list {
+  display: inline-block;
+  list-style: none;
+  margin: 0 0 0 5px;
+}
+ul.meta-cat-list li {
+  display: inline-block;
+}
+ul.meta-cat-list li:after {
+  content: ', ';
+}
+ul.meta-cat-list li:last-of-type:after {
+  content: '';
+}
+
+.meta-info-title {
+  font-weight: 500;
+}
+
+.sharethis a {
+  margin: 0 5px;
+}
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
@@ -1326,6 +1469,9 @@ object {
   max-width: 1200px;
   min-width: 320px;
   padding: 0 10px;
+}
+.constrain.sm {
+  max-width: 1100px;
 }
 
 .flexxed {
@@ -1632,6 +1778,10 @@ a.white-text {
     margin: 0 10px 0 0;
     padding: 0 0 0 5px;
   }
+
+  .single-post .post-thumbnail {
+    margin: 0 0 15px 0;
+  }
 }
 @media only screen and (min-width: 640px) {
   .cta-module .flexxed {
@@ -1855,6 +2005,108 @@ a.white-text {
     padding: 20px;
   }
 
+  .contact .page-intro .intro-text {
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+  .contact .contact-form {
+    padding: 25px;
+  }
+  .contact input[type=submit] {
+    width: 300px;
+  }
+
+  .contact-blocks.flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .contact-blocks .c-block {
+    margin: 0;
+    width: 30%;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+  .contact-form .col2, .contact-form .col3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .contact-form .col2 span {
+    width: 49%;
+  }
+  .contact-form .col3 span {
+    width: 32%;
+  }
+
+  .blog .intro-block {
+    margin: 0 0 30px 0;
+  }
+
+  .blog-post {
+    margin: 0 0 30px 0;
+  }
+  .blog-post.flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .blog-post .post-text {
+    width: 48%;
+  }
+  .blog-post .post-featured {
+    width: 48%;
+  }
+  .blog-post .post-featured a {
+    display: block;
+    height: 100%;
+  }
+  .blog-post .post-thumbnail img {
+    height: 100%;
+    max-width: initial;
+    width: auto;
+  }
+
+  .single-post .page-intro .intro-block.flexxed {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0 0 30px 0;
+  }
+  .single-post .entry-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .single-post .post-thumbnail {
+    margin: 0 0 20px 0;
+  }
+
   .top-footer {
     padding: 30px 0 20px 0;
   }
@@ -2028,6 +2280,22 @@ a.white-text {
     width: 40%;
   }
 
+  .contact input,
+  .contact select {
+    margin: 0 0 20px 0;
+  }
+
+  .blog .intro-block {
+    margin: 0 0 50px 0;
+  }
+
+  .blog-post .post-thumbnail img {
+    height: 100%;
+    max-height: 300px;
+    max-width: initial;
+    width: auto;
+  }
+
   .footer-col {
     width: 23%;
   }
@@ -2158,6 +2426,18 @@ a.white-text {
   .page-intro .services-text {
     padding: 30px;
   }
+
+  .contact .page-intro .intro-text {
+    width: 100%;
+  }
+
+  .blog .intro-block.flexxed h1 {
+    width: 33%;
+  }
+
+  .single-post .post-thumbnail {
+    margin: 0 0 30px 0;
+  }
 }
 @media only screen and (min-width: 1100px) {
   .p50 {
@@ -2245,5 +2525,13 @@ a.white-text {
 
   .page-banner {
     padding: 45px 0 110px;
+  }
+
+  .contact .contact-form {
+    padding: 50px;
+  }
+
+  .blog-post .post-thumbnail img {
+    max-height: 350px;
   }
 }

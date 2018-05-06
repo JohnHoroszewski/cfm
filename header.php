@@ -30,7 +30,7 @@
 			<div class="constrain">
 			
 				<div class="header-contact">
-					<a class="ltgray-text" href="tel:7322660812"><i class="accent-text fas fa-phone"></i> Call Us</a>
+					<a class="ltgray-text" href="tel:<?php echo get_theme_mod( 'theme_company_phone' ); ?>"><i class="accent-text fas fa-phone"></i> Call Us</a>
 					<a class="ltgray-text" href="mailto:contact@cleverfoxmedia.net"><i class="accent-text fas fa-envelope"></i> Email Us</a>
 				</div>
 

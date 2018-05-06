@@ -507,6 +507,8 @@ textarea:focus {
 
 select {
 	border: 0;
+	border-radius: 0 !important;
+	width: 100%;
 }
 
 textarea {
