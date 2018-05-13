@@ -175,10 +175,20 @@
 }
 
 // HOMEPAGE
+.home .slick-slide {
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .slide-content {
-    background-color: $accent;
+    background-color: $darkest;
     color: $lightest;
+    height: 200px;
     overflow: hidden;
+    padding: 15px;
 }
 
 .service-item,

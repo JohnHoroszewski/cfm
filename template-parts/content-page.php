@@ -10,45 +10,32 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+<?php $pBanner = get_field( 'top_banner_image' ); ?>
+    <div class="page-banner" style="background-image:url('<?php echo $pBanner[ 'url' ]; ?>');">
+        <div class="constrain">
+            <h1 class="big-title"><?php the_title(); ?></h1>
+        </div>
+    </div>
+    
+    <section class="page-intro p50">
+        <div class="constrain">
+            <div class="intro-block flexxed">
+                <h1>
+                    <?php the_field( 'intro_title' ); ?>
+                </h1>
+                <div class="intro-text">
+                    <?php the_field( 'intro_text' ); ?>
+                </div>
+            </div>
+        </div><!-- .constrain -->
+    </section><!-- .page-intro -->
 
-	<?php cfm_post_thumbnail(); ?>
+	<section class="page-content p50">
+		<div class="constrain">
+			<?php the_content(); ?>
+		</div>
+	</section>
 
-	<div class="entry-content">
-		<?php
-			the_content();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cfm' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-				edit_post_link(
-					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'cfm' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
 <section class="cta-module parallax <?php the_field( 'module_margin' ); ?>" style="background-image:url( '<?php echo get_theme_mod( 'theme_cta_background_image' ); ?>' );">
     <div class="constrain flexxed">

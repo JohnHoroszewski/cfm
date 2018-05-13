@@ -619,7 +619,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul a {
-  width: 200px;
+  width: 215px;
 }
 
 .main-navigation ul li:hover > ul,
@@ -877,6 +877,11 @@ a.top-logo {
   width: 55px;
 }
 
+.sub-menu {
+  background-color: white;
+  padding: 10px 0;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages body content
 --------------------------------------------------------------*/
@@ -949,7 +954,7 @@ a.top-logo {
   border-bottom: 0;
 }
 .recent-work-item .overlay {
-  background-color: rgba(18, 18, 18, 0.65);
+  background-color: rgba(41, 41, 41, 0.65);
   color: white;
   display: block;
   height: 100%;
@@ -1020,10 +1025,17 @@ a.top-logo {
   box-shadow: none;
 }
 
+.home .slick-slide img {
+  width: 100%;
+  height: auto;
+}
+
 .slide-content {
-  background-color: #fa8d00;
+  background-color: #292929;
   color: white;
+  height: 200px;
   overflow: hidden;
+  padding: 15px;
 }
 
 .service-item,
@@ -1541,27 +1553,33 @@ a.white-text {
   color: white;
 }
 
-.accent-bg {
+.accent-bg,
+a.accent-bg {
   background-color: #fa8d00;
 }
 
-.white-bg {
+.white-bg,
+a.white-bg {
   background-color: white;
 }
 
-.ltgray-bg {
+.ltgray-bg,
+a.ltgray-bg {
   background-color: #cdcdcd;
 }
 
-.dkgray-bg {
+.dkgray-bg,
+a.dkgray-bg {
   background-color: #464646;
 }
 
-.darkest-bg {
-  background-color: #121212;
+.darkest-bg,
+a.darkest-bg {
+  background-color: #292929;
 }
 
-.white-bg {
+.white-bg,
+a.white-bg {
   background-color: white;
 }
 
@@ -1572,24 +1590,25 @@ a.white-text {
   color: white;
 }
 
-.btn-auto, .btn-sm, .btn-md, .btn-lg, .btn-xl {
+a.btn-auto, .btn-auto, a.btn-sm, .btn-sm, a.btn-md, .btn-md, a.btn-lg, .btn-lg, a.btn-xl, .btn-xl {
   color: white;
   display: inline-block;
+  font-weight: 700;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
   text-align: center;
   text-transform: uppercase;
 }
-.btn-auto:hover, .btn-sm:hover, .btn-md:hover, .btn-lg:hover, .btn-xl:hover {
-  color: #121212;
+a.btn-auto:hover, .btn-auto:hover, a.btn-sm:hover, .btn-sm:hover, a.btn-md:hover, .btn-md:hover, a.btn-lg:hover, .btn-lg:hover, a.btn-xl:hover, .btn-xl:hover {
+  color: #292929;
 }
-.btn-auto.accent-bg:hover, .btn-sm.accent-bg:hover, .btn-md.accent-bg:hover, .btn-lg.accent-bg:hover, .btn-xl.accent-bg:hover {
+a.btn-auto.accent-bg:hover, .btn-auto.accent-bg:hover, a.btn-sm.accent-bg:hover, .btn-sm.accent-bg:hover, a.btn-md.accent-bg:hover, .btn-md.accent-bg:hover, a.btn-lg.accent-bg:hover, .btn-lg.accent-bg:hover, a.btn-xl.accent-bg:hover, .btn-xl.accent-bg:hover {
   background-color: #cdcdcd;
 }
-.btn-auto.ltgray-bg:hover, .btn-sm.ltgray-bg:hover, .btn-md.ltgray-bg:hover, .btn-lg.ltgray-bg:hover, .btn-xl.ltgray-bg:hover {
+a.btn-auto.ltgray-bg:hover, .btn-auto.ltgray-bg:hover, a.btn-sm.ltgray-bg:hover, .btn-sm.ltgray-bg:hover, a.btn-md.ltgray-bg:hover, .btn-md.ltgray-bg:hover, a.btn-lg.ltgray-bg:hover, .btn-lg.ltgray-bg:hover, a.btn-xl.ltgray-bg:hover, .btn-xl.ltgray-bg:hover {
   background-color: #fa8d00;
 }
-.btn-auto.white-bg, .btn-sm.white-bg, .btn-md.white-bg, .btn-lg.white-bg, .btn-xl.white-bg {
-  color: #121212;
+a.btn-auto.white-bg, .btn-auto.white-bg, a.btn-sm.white-bg, .btn-sm.white-bg, a.btn-md.white-bg, .btn-md.white-bg, a.btn-lg.white-bg, .btn-lg.white-bg, a.btn-xl.white-bg, .btn-xl.white-bg {
+  color: #292929;
 }
 
 .btn-auto {
@@ -1636,7 +1655,7 @@ a.white-text {
 .slick-prev:hover, .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
-  background-color: #121212;
+  background-color: #292929;
   transition: all 0.25s ease;
 }
 .slick-prev:hover:before, .slick-prev:focus:before,
@@ -1685,6 +1704,14 @@ a.white-text {
 /*--------------------------------------------------------------
 ## Media Queries
 --------------------------------------------------------------*/
+@media only screen and (min-width: 480px) {
+  .slide-content {
+    height: 300px;
+  }
+  .slide-content h2 {
+    font-size: 48px;
+  }
+}
 @media only screen and (min-width: 568px) {
   .big-title {
     font-size: 34px;
@@ -1866,6 +1893,35 @@ a.white-text {
     column-count: 2;
     -webkit-column-gap: 30px;
     column-gap: 30px;
+  }
+
+  .home .slick-slide h2 {
+    line-height: 1.15em;
+  }
+  .home .slick-slide .slide-content {
+    float: left;
+    height: 400px;
+    position: relative;
+    width: 50%;
+  }
+  .home .slick-slide .slide-text-wrapper {
+    position: absolute;
+    left: 20px;
+    max-width: 700px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .home .slick-slide .slide-image {
+    width: 50%;
+    float: left;
+    height: 400px;
+    overflow: hidden;
+  }
+  .home .slick-slide img {
+    height: 100%;
+    width: auto;
+    max-width: none;
   }
 
   .industries .flexxed {
@@ -2254,6 +2310,20 @@ a.white-text {
     bottom: -25px;
   }
 
+  .home .slick-slide h2 {
+    line-height: 1.35em;
+  }
+  .home .slick-slide .slide-text-wrapper {
+    left: 35px;
+    padding: 0 40px 0 0;
+  }
+  .home .slick-slide .slide-content {
+    height: 550px;
+  }
+  .home .slick-slide .slide-image {
+    height: 550px;
+  }
+
   .service-content-container h2,
   .client-content-container h2 {
     margin: 0 0 24px 0;
@@ -2338,7 +2408,7 @@ a.white-text {
   .recent-work-item .overlay .view-project,
   .recent-work-item .overlay .see-more {
     background-color: white;
-    color: #121212;
+    color: #292929;
   }
   .recent-work-item .overlay .view-project:hover,
   .recent-work-item .overlay .see-more:hover {
@@ -2380,6 +2450,10 @@ a.white-text {
   }
   .page-banner .big-title {
     font-size: 45px;
+  }
+
+  .home .slick-slide h2 {
+    font-size: 54px;
   }
 
   .service-content-container,
@@ -2517,6 +2591,13 @@ a.white-text {
   .page-intro .intro-block {
     padding: 50px;
     top: -125px;
+  }
+
+  .home .slick-slide .slide-text-wrapper {
+    left: 60px;
+  }
+  .home .slick-slide h2 {
+    font-size: 63px;
   }
 
   .industry-block {

@@ -19,14 +19,16 @@ get_header(); ?>
 
                         <div class="slide">
                             <?php $sImage = get_sub_field( 'slide_image' ); ?>
-                            <img src="<?php echo $sImage[ 'url' ] ?>" alt="<?php echo $sImage[ 'alt' ] ?>">
+                            <div class="slide-image">
+                                <img src="<?php echo $sImage[ 'url' ] ?>" alt="<?php echo $sImage[ 'alt' ] ?>">
+                            </div>
                             <div class="slide-content">
-                                <h2><?php the_sub_field( 'slide_headinh' ); ?></h2>
-                                <div class="slide-text">
-                                    <div class="constrain">
+                                <div class="slide-text-wrapper">
+                                    <h2><?php the_sub_field( 'slide_heading' ); ?></h2>
+                                    <div class="slide-text">
                                         <?php the_sub_field( 'slide_content' ); ?>
                                         <?php if ( get_sub_field( 'slide_cta_text' ) ) : ?>
-                                            <a style="<?php the_sub_field( 'slide_cta_color' ); ?> <?php the_sub_field( 'slide_cta_style' ); ?>" href="<?php the_sub_field( 'slide_cta_url' ); ?>"><?php the_sub_field( 'slide_cta_text' ); ?></a>
+                                            <a class="<?php the_sub_field( 'slide_cta_color' ); ?> <?php the_sub_field( 'slide_cta_style' ); ?> btn-md" href="<?php the_sub_field( 'slide_cta_url' ); ?>"><?php the_sub_field( 'slide_cta_text' ); ?></a>
                                         <?php endif; ?>
                                     </div>
                                 </div>

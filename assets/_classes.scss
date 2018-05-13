@@ -87,27 +87,33 @@ a.white-text {
     color: $lightest;
 }
 
-.accent-bg {
+.accent-bg,
+a.accent-bg {
     background-color: $accent;
 }
 
-.white-bg {
+.white-bg,
+a.white-bg {
     background-color: $lightest;
 }
 
-.ltgray-bg {
+.ltgray-bg,
+a.ltgray-bg {
     background-color: $ltgray;
 }
 
-.dkgray-bg {
+.dkgray-bg,
+a.dkgray-bg {
     background-color: $dkgray;
 }
 
-.darkest-bg {
+.darkest-bg,
+a.darkest-bg {
     background-color: $darkest;
 }
 
-.white-bg {
+.white-bg,
+a.white-bg {
     background-color: $lightest;
 }
 
@@ -119,9 +125,10 @@ a.white-text {
     }
 }
 
-.btn-auto, .btn-sm, .btn-md, .btn-lg, .btn-xl {
+a.btn-auto, .btn-auto, a.btn-sm, .btn-sm, a.btn-md, .btn-md, a.btn-lg, .btn-lg, a.btn-xl, .btn-xl {
     color: $lightest;
     display: inline-block;
+    font-weight: 700;
     box-shadow: $lshadow;
     text-align: center;
     text-transform: uppercase;
